@@ -1,0 +1,41 @@
+
+@mixin small-xs-screens{
+    @media only screen and(min-width: 315px) {
+        @content;
+    }
+}
+@mixin xs-screens{
+    @media only screen and(min-width: 480px) {
+        @content;
+    }
+}
+@mixin sm-screens{
+    @media only screen and(min-width: 576px) {
+        @content;
+    }
+}
+@mixin md-screens{
+    @media only screen and(min-width: 768px) {
+        @content;
+    }
+}
+@mixin lg-screens{
+    @media only screen and(min-width: 992px) {
+        @content;
+    }
+}
+@mixin x-lg-screens{
+    @media only screen and(min-width: 1200px) {
+        @content;
+    }
+}
+@mixin xx-lg-screens{
+    @media only screen and(max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin google-font($font){
+    $font: unquote($font);
+    @import url(https://fonts.googleapis.com/css?family=#{$font})
+}

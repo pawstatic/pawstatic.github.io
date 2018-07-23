@@ -1,0 +1,63 @@
+@import "functions";/* file: _functions.scss, must be attached first*/
+@import "variables";
+@import "mixins";
+
+
+
+/* Buttons custom:*/
+.btn {
+	border-radius: 28px;
+}
+.btn-primary{
+	background-color: $d-g-amarant;
+	border-color: darken($d-g-amarant, 15%);
+}
+.btn-primary:hover {
+    background-color: darken($d-g-amarant, 15%);
+		border-color: darken($d-g-amarant, 25%);
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    background-color: darken($d-g-amarant, 15%);
+		border-color: darken($d-g-amarant, 25%);
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+}
+.btn-primary:focus, .btn-primary.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+}
+
+  /*outline button*/
+.btn-outline-primary {
+    color: $d-g-amarant;
+    background-color: transparent;
+    background-image: none;
+    border-color: $d-g-amarant;
+    &:focus, &.focus{
+			-webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+    }
+}
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:focus {
+    color: #fff;
+    background-color: $d-g-amarant;
+    border-color: darken($d-g-amarant, 25%);
+}
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: $d-g-amarant;
+  background-color: transparent;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $d-g-amarant;
+    border-color: darken($d-g-amarant, 25%);
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+}

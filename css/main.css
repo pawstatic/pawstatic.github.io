@@ -1,0 +1,31 @@
+/* file: _functions.scss, must be attached first*/
+/*====COLORS=======*/
+/*=====FONTS=======*/
+/*@include google-font("Alegreya+Sans");*/
+/*@include google-font("Titillium+Web");*/
+body {
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #545871; }
+
+header {
+  background-color: #fff; }
+
+.top-header {
+  color: #fff;
+  background-image: url("../img/bg-header.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 1400px) {
+    .top-header {
+      height: 720px; } }
+
+.top-header__nav a {
+  color: #fff;
+  text-decoration: none; }
+
+h1.top-header__greating {
+  font-size: 54px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */
