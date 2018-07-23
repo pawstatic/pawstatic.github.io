@@ -29,7 +29,7 @@
 /*outline button*/
 .btn-outline-primary {
   color: #545871;
-  background-color: transparent;
+  background-color: #fff;
   background-image: none;
   border-color: #545871; }
   .btn-outline-primary:focus, .btn-outline-primary.focus {

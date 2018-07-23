@@ -6,19 +6,19 @@
 
 /* Buttons custom:*/
 .btn {
-	border-radius: 28px;
+  border-radius: 28px;
 }
 .btn-primary{
-	background-color: $d-g-amarant;
-	border-color: darken($d-g-amarant, 15%);
+  background-color: $d-g-amarant;
+  border-color: darken($d-g-amarant, 15%);
 }
 .btn-primary:hover {
     background-color: darken($d-g-amarant, 15%);
-		border-color: darken($d-g-amarant, 25%);
+    border-color: darken($d-g-amarant, 25%);
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
     background-color: darken($d-g-amarant, 15%);
-		border-color: darken($d-g-amarant, 25%);
+    border-color: darken($d-g-amarant, 25%);
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
@@ -33,11 +33,11 @@
   /*outline button*/
 .btn-outline-primary {
     color: $d-g-amarant;
-    background-color: transparent;
+    background-color: #fff;
     background-image: none;
     border-color: $d-g-amarant;
     &:focus, &.focus{
-			-webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+      -webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
             box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
     }
 }
