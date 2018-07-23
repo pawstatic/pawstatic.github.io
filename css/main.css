@@ -8,6 +8,11 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: #545871; }
 
+@media only screen and (max-width: 1400px) {
+  .wrapper {
+    max-width: 1440px;
+    margin-bottom: 0 auto; } }
+
 header {
   color: #fff;
   background-image: url("../img/bg-header.png");
@@ -53,10 +58,32 @@ h1.top-header__greating {
 
 /* SECTION 1*/
 .section1 {
-  padding-top: 100px;
+  padding: 100px 0px;
   background-color: #fff;
   color: #545871; }
   .section1 h2 {
     font-size: 48px; }
+
+.section1__article {
+  padding-left: 150px; }
+  .section1__article p {
+    margin-top: 30px; }
+  .section1__article button {
+    margin-top: 75px;
+    font-size: 24px;
+    padding: 8px 80px; }
+
+.section1__gallery {
+  padding-left: 60px;
+  padding-right: 120px; }
+  .section1__gallery .thumb {
+    text-align: center;
+    padding: 15px 0; }
+    .section1__gallery .thumb p {
+      font-size: 16px;
+      color: #fff;
+      position: absolute;
+      bottom: 10%;
+      left: 15%; }
 
 /*# sourceMappingURL=main.css.map */
