@@ -86,4 +86,36 @@ h1.top-header__greating {
       bottom: 10%;
       left: 15%; }
 
+/* SECTION 2*/
+.section2 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-color: #f7eceb; }
+
+.section2__ollieMaggie p {
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 15%; }
+
+.section2__article {
+  color: #545871;
+  padding: 100px 0; }
+  .section2__article h2 {
+    font-size: 48px;
+    padding-left: 180px;
+    padding-right: 150px; }
+  .section2__article p {
+    padding-left: 180px;
+    padding-right: 150px; }
+  .section2__article button {
+    margin-top: 75px;
+    font-size: 24px;
+    padding: 8px 80px; }
+
+.section2__signUp {
+  padding-left: 180px;
+  padding-right: 150px; }
+
 /*# sourceMappingURL=main.css.map */
