@@ -24,10 +24,10 @@
 </head>
 <body>
 <!-- ======================== HEADER START ================================================== -->
-<header class="container-fluid"><!--container-fluid may allow the header background stretch over the 
+<header><!--container-fluid may allow the header background stretch over the 
   whole page width -->
-  <div class="top-header"><!--container fixed shall contain the header 
-  content within the frame area -->
+  <div class="top-header container-fluid"><!--container fixed shall contain the header 
+    content within the frame area -->
       <div class="row">
         <div class="col-xl-6">
           <div class="top-header__brand">
@@ -47,20 +47,49 @@
           </h1>
           <div class="top-header__signUp">
             <button class="btn btn-outline-primary ">Sign Up</button>
-          </div>
-          
+          </div>          
         </div>
-
+        
+        <p class="top-header__signature">Ozzie in Brooklyn</p>
+        
       </div>
   </div>
 </header>
 <!-- ======================= HEADER END =========================================== -->
 <!-- ======================= MAIN START =========================================== -->
-<main class="container-fluid">
+<main>
 <!-- SECTION 1 -->
-  <section id="section1" class="container"><!-- or container-fluid if need to spread the 
-    background, and then embed div.container inside to keep the content within the page frame area  -->
-    <div class="row"></div>
+  <section class="container-fluid section1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 section1__article">
+          <h2>
+            Expert care for your furry, feathery, or scaley friend
+          </h2>
+          <p>
+            We know how stressful it is to leave your pets at home alone. We’re a team of experienced animal caregivers, well connected to local veterinarians. Trust to us to love them like our own, and to keep them safe and happy till you’re home.
+          </p>
+        </div>
+        <div class="col-lg-6 section1__gallery">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="img/muffin.png">
+            </div>
+            <div class="col-lg-6">
+              <img src="img/peep.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="img/natasha.png">
+            </div>
+            <div class="col-lg-6">
+              <img src="img/marlon.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 <!-- SECTION 2 -->
   <section id="section2" class="container"><!-- or container-fluid if need to spread the 
