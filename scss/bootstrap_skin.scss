@@ -2,6 +2,28 @@
 @import "variables";
 @import "mixins";
 
+/* Navbar:*/
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-light .navbar-brand {
+    color: #fff;
+}
+.bg-light {
+    background-color: transparent !important;
+}
+.navbar-light .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+.navbar-toggler:focus, .navbar-toggler:hover {
+    text-decoration: none;
+    background-color:darken(#fff, 15%);
+}
+button:focus {
+    outline: none;
+    /* outline: 5px auto -webkit-focus-ring-color; */
+}
 
 
 /* Buttons custom:*/
