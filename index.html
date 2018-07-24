@@ -24,10 +24,9 @@
 </head>
 <body>
 <!-- ======================== HEADER START ================================================== -->
-<header><!--container-fluid may allow the header background stretch over the 
-  whole page width -->
-  <div class="top-header container-fluid"><!--container fixed shall contain the header 
-    content within the frame area -->
+<header><!-- for style, see main.scss HEADER -->
+  <div class="top-header container-fluid">
+    <div class="wrapper">
       <div class="row">
         <div class="col-xl-6">
           <div class="top-header__brand">
@@ -53,12 +52,14 @@
         <p class="top-header__signature">Ozzie in Brooklyn</p>
         
       </div>
+    </div>
   </div>
 </header>
 <!-- ======================= HEADER END =========================================== -->
 <!-- ======================= MAIN START =========================================== -->
 <main>
 <!-- SECTION 1 -->
+<!-- for style, see main.scss SECTION 1 -->
   <section class="container-fluid section1">
     <div class="wrapper">
       <div class="row">
@@ -97,6 +98,7 @@
     </div>
   </section>
 <!-- SECTION 2 -->
+<!-- for style, see main.scss SECTION 2 -->
   <section class="container-fluid section2">
     <div class="wrapper">
       <div class="row no-gutters">
@@ -119,6 +121,7 @@
     </div>
   </section>
 <!-- SECTION 3 -->
+<!-- for style, see main.scss SECTION 3 -->
   <section class="section3 container-fluid">
     <div class="container pr-0 pl-0">
       <div class="row">
@@ -270,17 +273,89 @@
               Sign Up
             </button>
         </div>
-      </div>
-      
-        
+      </div>              
     </div>
   </section>
-  <!-- SECTION 4 -->
-  <section class="container-fluid section4">
-    
+<!-- SECTION 4 -->
+<!-- for style, see main.scss SECTION 4 -->
+  <section class="section4 container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="section4__heading col-lg-12">
+          <h2>
+            Affordable options,<br> tailored to your needs
+          </h2>
+          <p>
+            All services include live updates including photos and chat,<br>  
+            as well as notifications of sitter arrival and departure times.
+          </p>
+        </div>
+      </div>
+      <div class="row section4__pricePlan">
+        <div class="col-lg-4">
+          <div class="section4__pricePlan-options">
+            <div>
+              <img src="img/Flower icon.png" alt="flower-cercle icon">
+              <h3>Dog walk</h3>
+              <p>
+                We’ll take your pup<br> for a 30 minute walk<br> and make sure he or<br> she has fresh food<br> and water.
+              </p>
+            </div>            
+            <div class="cost">
+              <a href="#">
+              <p>$15</p>
+              <span class="small">PER 30MIN WALK</span>
+              </a>
+            </div>
+          </div>
+        </div>          
+        <div class="col-lg-4">
+          <div class="section4__pricePlan-options">
+            <div>
+              <img src="img/wave-ico.png" alt="hand wave cercle icon">
+              <h3>Drop-in visit</h3>
+              <p>
+                We’ll stop by to<br> snuggle, feed, and<br> play with your pets in<br> the comfort of their<br> own home.
+              </p>
+            </div>            
+            <div class="cost">
+              <a href="#">
+              <p>$15</p>
+              <span class="small">PER 30MIN VISIT</span>
+              </a>
+            </div>
+          </div>
+        </div>          
+        <div class="col-lg-4">
+          <div class="section4__pricePlan-options">
+            <div>
+              <img src="img/home-ico.png" alt="home-cercle icon">
+              <h3>House Sitting</h3>
+              <p>
+                We’ll stay overnight<br> with your pets to make<br> sure they have<br> round-the-clock love.<br><br>
+              </p>
+            </div>            
+            <div class="cost">
+              <a href="#">
+              <p>$45</p>
+              <span class="small">PER NIGHT</span>
+              </a>
+            </div>
+          </div>
+        </div>          
+      </div>
+      <div class="row">
+        <div class="section4__signUp col-lg-12">
+          <button class="btn btn-primary">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
   </section>
-  <!-- SECTION 5 -->
-  <section class="container-fluid section5">
+<!-- SECTION 5 -->
+<!-- for style, see main.scss SECTION 5 -->
+  <section class="section5 container-fluid">
     <div class="row"></div>
   </section>
 </main>

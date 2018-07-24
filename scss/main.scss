@@ -10,18 +10,14 @@ body {
 	font-family: Helvetica, Arial, sans-serif; 
 	color: $d-g-amarant;
 }
-.wrapper{
+.wrapper{	
 	margin: 0 auto;
 	@include xx-lg-screens {
 		max-width: 1440px;
 	}
-	@include xx-lg-screens {
-		max-width: 1440px;
-	}
-
-	
-
 }
+
+/* HEADER :*/
 header{
 	color: #fff;
 	background-image: url("../img/bg-header.png");
@@ -69,7 +65,7 @@ h1.top-header__greating{
 		padding: 8px 80px;	
 	}
 }
-
+/*========== MAIN ===========================*/
 /* SECTION 1*/
 .section1 {
 	padding: 100px 0px;
@@ -151,6 +147,7 @@ h1.top-header__greating{
 .section3 {
 	background-color: $d-g-amarant;
 	padding-top: 110px;
+	padding-bottom: 110px;
 	min-height: 900px;
 }
 .section3__heading{
@@ -188,10 +185,87 @@ h1.top-header__greating{
 		padding: 8px 80px;	
 	}
 }
+
 /*SECTION 4*/
 .section4 {
-	
+	color: $d-g-amarant;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 .section4__heading{
-	
+	text-align: center;
+	h2{
+		font-size: 48px;
+		font-weight: bold;
+	}
+	p{
+		padding-top: 40px;
+		font-size: 24px;
+		font-weight: 300;
+	}
 }
+.section4__pricePlan{
+	padding-top: 95px;
+
+}
+.section4__pricePlan-options{
+	border-radius: 10px;
+	border: 1px solid $grey;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	&:hover{
+		border-top: 2px solid $grey;
+		border-bottom: 2px solid $grey;
+		border-left: .05px solid $grey;
+		border-right: .05px solid $grey;
+	}
+	img{
+		position: absolute;
+		top: -12%;
+		left: 35%;
+	}
+	h3{
+		padding-top: 60px;
+		font-size: 36px;
+		font-weight: bold;
+	}
+	p {
+		font-size: 20px;
+	}
+	.cost{
+		background-color: $light-grey;
+		border-top: 1px solid $grey;
+		a{
+			color: $d-g-amarant;
+			text-decoration: none;
+			&:hover{
+				color: darken($d-g-amarant, 15%);
+			}
+		}
+		p {
+			font-size: 48px;
+			font-weight: bold;
+			padding-top: 20px;
+			margin-bottom: 0;
+		}
+		.small{
+			font-size: 12px;
+		}
+	}
+}
+
+.section4__signUp{
+	padding-top: 60px;
+	text-align: center;
+	button{
+		font-weight: bold;
+		font-size: 24px;
+		padding: 8px 80px;
+	}
+}
+
+/* SECTION 5*/
+
