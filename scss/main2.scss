@@ -1,0 +1,99 @@
+@import "functions";/* file: _functions.scss, must be attached first*/
+@import "variables";
+@import "mixins";
+
+/*@include google-font("Alegreya+Sans");*/
+/*@include google-font("Titillium+Web");*/
+
+body {
+	font-size: 24px;
+	font-family: Helvetica, Arial, sans-serif; 
+	color: $d-g-amarant;
+}
+.wrapper{
+	margin: 0 auto;
+	@include xx-lg-screens {
+		max-width: 1440px;
+	}
+	@include xx-lg-screens {
+		max-width: 1440px;
+	}
+
+	
+
+}
+header{
+	color: #fff;
+	background-image: url("../img/bg-header.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+.top-header{
+	color: #fff;
+	padding-bottom: 80px;
+	
+}
+.top-header__brand{
+	padding-top: 60px;
+	padding-left: 115px;
+	img{padding-right: 15px;}
+	p{
+		padding-top: 15px;
+	}
+}
+.top-header__signature{
+	font-size: 16px;
+	padding-top: 20px;
+	padding-left: 115px;
+}
+.top-header__nav{
+	padding-top: 110px;
+	padding-left: 170px;
+	a{
+		color: #fff;
+		text-decoration: none;
+	}
+}
+h1.top-header__greating{
+	font-size: 54px;
+	font-weight: bold;
+	padding-left: 170px;
+	padding-top: 35px;
+}
+.top-header__signUp {
+	padding-left: 170px;
+	padding-top: 0;
+	button{
+		font-size: 24px;
+		padding: 8px 80px;	
+	}
+}
+
+
+
+
+
+
+
+
+
+/* SECTION 3*/
+.section3 {
+	background-color: $d-g-amarant;
+	padding-top: 120px;
+	min-height: 900px;
+}
+.section3__heading{
+		text-align: center;
+		font-size: 48px;
+			color: #fff;
+	
+}
+/*SECTION 4*/
+.section4 {
+	
+}
+.section4__heading{
+	
+}

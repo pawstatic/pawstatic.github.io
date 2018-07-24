@@ -61,3 +61,47 @@
   -webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
           box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
 }
+/* btn-info:*/
+ /*outline button*/
+.btn-info {
+    color: $d-g-amarant;
+    background-color: $pink;
+    background-image: none;
+    border-color: $d-g-amarant;
+    &:focus, &.focus{
+      -webkit-box-shadow: 0 0 0 0.2rem rgba($pink, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba($pink, 0.5);
+    }
+}
+.btn-info:hover, .btn-info:active, .btn-info:focus {
+    color: $d-g-amarant;
+    background-color: darken($pink, 15%);
+    border-color: darken($d-g-amarant, 25%);
+}
+.btn-info.disabled, .btn-info:disabled {
+  color: $d-g-amarant;
+  background-color: transparent;
+}
+.btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: darken($pink, 25%);
+  border-color: darken($d-g-amarant, 25%);
+}
+.btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus,
+.show > .btn-info.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($pink, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba($pink, 0.5);
+}
+
+/* card*/
+
+.card{
+  border-radius: 10px;
+}
+
+/* table:*/
+
+.table-bordered {
+ 
+}

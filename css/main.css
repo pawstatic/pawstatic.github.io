@@ -8,10 +8,14 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: #545871; }
 
-@media only screen and (max-width: 1400px) {
-  .wrapper {
-    max-width: 1440px;
-    margin-bottom: 0 auto; } }
+.wrapper {
+  margin: 0 auto; }
+  @media only screen and (max-width: 1400px) {
+    .wrapper {
+      max-width: 1440px; } }
+  @media only screen and (max-width: 1400px) {
+    .wrapper {
+      max-width: 1440px; } }
 
 header {
   color: #fff;
@@ -117,5 +121,41 @@ h1.top-header__greating {
 .section2__signUp {
   padding-left: 180px;
   padding-right: 150px; }
+
+/* SECTION 3*/
+.section3 {
+  background-color: #545871;
+  padding-top: 110px;
+  min-height: 900px; }
+
+.section3__heading h2 {
+  text-align: center;
+  font-size: 48px;
+  color: #fff; }
+
+.section3__pets {
+  padding-top: 25px; }
+
+.section3__pets-profile {
+  padding: 25px; }
+  .section3__pets-profile .pet-avatar {
+    padding-bottom: 20px;
+    font-weight: bold; }
+  .section3__pets-profile .pet-data {
+    text-align: center;
+    padding-bottom: 10px; }
+  .section3__pets-profile .pet-param {
+    font-size: 12px;
+    text-align: center; }
+
+.section3__signUp {
+  padding-top: 30px; }
+  .section3__signUp button {
+    color: #545871;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 8px 80px; }
+
+/*SECTION 4*/
 
 /*# sourceMappingURL=main.css.map */
