@@ -49,7 +49,7 @@
                 <a class="nav-link" href="#">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#signUp">Sign Up</a>
               </li>
             </ul>
           </div>
@@ -423,8 +423,68 @@
     <div class="row"></div>
   </div>
 </footer>
-<!-- ==================================== FOOTER END =============================================== -->
-
+<!-- ==================================== FOOTER END ============================ -->
+<!-- ==================================== MODAL: ============================ -->
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">      
+      <div class="modal-body">
+      <!--start content --> 
+        <div class="section-signup">
+          <div class="row">
+            <div class="section-signup__page1-left col-5">
+              <div class="row">
+                <div class="section-signup__page1-left-brand col-12">
+                  <a href="#">
+                    <img src="img/paw-pink.png" class="img-fluid float-left pr-3">
+                    <p class="pt-3">PAWSTATIC</p>
+                  </a>
+                </div>
+              </div>
+              <div class="section-signup__page1-left-breadcrumbs">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="brearcrumb-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 177" width="40" height="177">
+                          <defs>
+                            <image width="3" height="161" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAChCAMAAAA1IvVoAAACAVBMVEUAAACUlqVmZpmVl6ZVVVWUlqWUlqWOjo6Li6KVl6WHlqWUlKGUl6aSkp6Vl6aPj6OOjqGUlqaUlKWVl6aPj5+PlqWVlaOUlqaTk6aUlKCUlqWTk6SSkqOVl6WTk6KSkqWSlqSRlaOVlaaUlqaSlqOSlqaRlaWUlqaTl6KSlaSVlaOTlqSSlqOSlaaUlqWTlqaSlaWVl6WTl6aTlqWUlKWVl6aUl6WUlqaTlqSVl6WVlaWUl6WUlqSVlaWTlqSUl6WTlaWVlaSUlqWTlqSUlqWVlqWUl6WUlqSVl6aVlaWUl6WVlqWVlaWVlqWUlqaTlaWUl6aUlqaUlqWUlqWVl6aTlaSVlqaTlaaVl6WVl6WUlqaUlqaTlaWUlqSTlaWUl6aVl6SUlqWTlaSVl6WUlqWUlqaVl6aUlqSVlqWUlaaUlqWUlqaVl6WUl6WUl6aTl6WUlqWVl6SUlqWUlqWUl6SVlqWTl6aUl6aUlaWUlqaVlqWUlqWUlaaVl6WUlqWUlqaUl6WVlqWUl6WUlqaUlqWUl6WVlqaVlqaUl6WUl6WVlqaTl6aUlqaVlqWVlqaUl6aUl6WVlqaUl6aUl6aUlqWUlqWVlqWVlqaUl6WVlqWVlqWUl6WVlqaUl6WUl6WVlqWVlqWVlqWVlqWVlqWUl6WUlqWUl6WUlqaVlqWUlqaTlaZId88BAAAAq3RSTlMAuAX/A/TvCQvyERP5FfwZG/gf/iAiJPMoK/0tL/o0Njg6PPs9P0HnQkZISUtN4FBS91NVT99Y9lr1W11fYFzjY2VmaPHpaWvwbG7Yce5ydO11d+x4duJ7633qfoB5guiEhYfmiOWJgcyMjY+Q4cuTlJXelpjdmtyRyJzbndqe2Z+XzaCi16PWpNXRptSo06nSxavQrM+vzrCyqsG0ybXAtse+ucSzvL2tsWqaKrIpAAABcUlEQVR4nF3S+TOWURjG8S9KZU2FCMnSQptsKZG1KFqIStIma5aobFFCRdm9vYSKivyVXY9zfuGZ+cw1Z+a+n/vcMweczwM8vWDHTpvesEu527EHfJS+4uMH/l7bBECgcq8VGAT79sMBK1hCnAyFg8qwcDgkEY5IiAowDku0dcRJzY2JhTiJt46qPu4YHFeekATdJ1FOyinNTTwNZ5Rnk4xzVrKkpEJaOpzPgAtyUTK17yXJyobLoUaO5uZaeflGTgEUKq9cNYqsYsm9BtdLoFRu3IRbcrsMyuVOBVTeNe7dN6rkQYFRrd6HNfBIOz2WJ0/hWS08l7p6aNC9Gq2mCqP5hepboFW7tmmn9pfQIZ2v4PUb6OqGnl7oe2v0D8A7zXk/CB+UQ8PGyEfj02edR2Hsi/F1HCYm1TMF0zMwOweub+BW/7zmLnyHxSVjWbPcP+Dnr61cK3pS6l/9rX/8gb/qWVPdugtWlO5/JjeKN1/ffyq8XX01VqIlAAAAAElFTkSuQmCC"/>
+                            <image width="24" height="24" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAALVBMVEWVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6YVYaIfAAAAD3RSTlMAIG+vz/+fUO9goHCw0PBF4cFYAAAAfElEQVR4nGNgYGBgVHYNMRJgAAPG1FAgCIPwKkLBoB3E5gyFgglATimMEw7U0QrjRAgwcIXCwQIGUQQnkGErghPNcBTBiWG4iuCEMIQiAVQOkrJYVANQjEaxFMU5jE9h7DgBVC+geo6hDsJ+DgmQpSB2FCx49lyNPQ1iAwC62VWza9NaVgAAAABJRU5ErkJggg=="/>
+                            <image width="24" height="24" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAALVBMVEWVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6YVYaIfAAAAD3RSTlMAIG+vz/+fUO9goHCw0PBF4cFYAAAAfElEQVR4nGNgYGBgVHYNMRJgAAPG1FAgCIPwKkLBoB3E5gyFgglATimMEw7U0QrjRAgwcIXCwQIGUQQnkGErghPNcBTBiWG4iuCEMIQiAVQOkrJYVANQjEaxFMU5jE9h7DgBVC+geo6hDsJ+DgmQpSB2FCx49lyNPQ1iAwC62VWza9NaVgAAAABJRU5ErkJggg=="/>
+                            <image width="40" height="40" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAS1BMVEX///////////////////////////////////////////////////////////////////////////////////////////////////+yVYcAAAAAGXRSTlMAP3+vz/8wII/fEJ9g77+gkECAsNBw4PBQ+bwffQAAAN9JREFUeJzFlcsWgyAMRFNlfCAWClb9/y8tWnuKiJKuOut7MoZJItFOt6IU8BJlUdGp6qZFoLapk5jscFAnj5zqjxzQq5hLlNuK7m3vZxxQhvYXnCcZvpG7uuaArSOZ7DdU//5MneMAveaR54AlI8MBjQfbPOZzJ3pwOKAiywMtOR7oSPBAQTwO+Cc48LiB/zzMB3/yI6SRw42/jBl7cNmrQHLKcZNkruv8WeyMuf6eist4XHikLki3v5Gn7poiqWTv0xxz3j5RVCdO85KR2eU+mvSxX1VZt07y4Gz0+3gBluUc5xgZNqEAAAAASUVORK5CYII="/>
+                            <image width="24" height="24" id="img5" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAALVBMVEVUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHFUWHHKyI86AAAAD3RSTlMAIG+vz/+fUO9goHCw0PBF4cFYAAAAfElEQVR4nGNgYGBgVHYNMRJgAAPG1FAgCIPwKkLBoB3E5gyFgglATimMEw7U0QrjRAgwcIXCwQIGUQQnkGErghPNcBTBiWG4iuCEMIQiAVQOkrJYVANQjEaxFMU5jE9h7DgBVC+geo6hDsJ+DgmQpSB2FCx49lyNPQ1iAwC62VWza9NaVgAAAABJRU5ErkJggg=="/>
+                          </defs>
+                          <style>
+                            tspan { white-space:pre }
+                          </style>
+                          <use id="Line 115" href="#img1" x="19" y="0" />
+                          <use id="Rectangle 192" href="#img2" x="8" y="81" />
+                          <use id="Rectangle 193" href="#img3" x="8" y="153" />
+                          <use id="Ellipse 83" href="#img4" x="0" y="1" />
+                          <use id="Ellipse 84" href="#img5" x="8" y="9" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <ul class="breadcrumbs">
+                        <li><a href="#">Pet basics</a></li>
+                        <li><a href="#">Payment details</a></li>
+                        <li><a href="#">Confirm</a></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>                          
+            </div>
+            <div class="section-signup__page1-form col-7">
+              
+            </div>
+          </div>
+        </div>       
+      <!--end content --> 
+      </div>      
+    </div>
+  </div>
+</div>
+<!-- ====================================END MODAL ============================ -->
     <!-- Lib JavaScripts -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

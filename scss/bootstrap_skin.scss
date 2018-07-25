@@ -127,3 +127,53 @@ button:focus {
 .table-bordered {
  
 }
+
+/*modal*/
+.modal-body {
+  padding: 0;
+  .section-signup__page1-left {
+    background-image: url("../img/dog_01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+  }
+  .section-signup__page1-left-brand{
+    padding-top: 30px;
+    padding-left:50px;
+  }
+  .section-signup__page1-left-brand a{
+    text-decoration: none;
+    color:  #fff;
+  }
+  .section-signup__page1-left-breadcrumbs {
+    padding-top: 70px;
+    .brearcrumb-img{
+      text-align: right;
+    }
+    ul.breadcrumbs{
+      list-style-type: none;
+      padding-left: 0;
+      li{
+        padding-top: 5px;
+        padding-bottom: 30px;
+        a{
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+
+  }
+  .section-signup__page1-form {
+    h2{
+      font-size: 48px;
+      color: $d-g-amarant;
+    }    
+  }
+  .petForm__body{
+    background-color: $light-pink;
+  }
+  .petForm__footer{
+    background-color: #fff;
+  }
+}

@@ -114,5 +114,39 @@ button:focus {
   border-radius: 10px; }
 
 /* table:*/
+/*modal*/
+.modal-body {
+  padding: 0; }
+  .modal-body .section-signup__page1-left {
+    background-image: url("../img/dog_01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px; }
+  .modal-body .section-signup__page1-left-brand {
+    padding-top: 30px;
+    padding-left: 50px; }
+  .modal-body .section-signup__page1-left-brand a {
+    text-decoration: none;
+    color: #fff; }
+  .modal-body .section-signup__page1-left-breadcrumbs {
+    padding-top: 70px; }
+    .modal-body .section-signup__page1-left-breadcrumbs .brearcrumb-img {
+      text-align: right; }
+    .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs {
+      list-style-type: none;
+      padding-left: 0; }
+      .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li {
+        padding-top: 5px;
+        padding-bottom: 30px; }
+        .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li a {
+          text-decoration: none;
+          color: #fff; }
+  .modal-body .section-signup__page1-form h2 {
+    font-size: 48px;
+    color: #545871; }
+  .modal-body .petForm__body {
+    background-color: #faeceb; }
+  .modal-body .petForm__footer {
+    background-color: #fff; }
 
 /*# sourceMappingURL=bootstrap_skin.css.map */
