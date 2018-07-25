@@ -113,11 +113,151 @@ button:focus {
 .card {
   border-radius: 10px; }
 
-/* table:*/
+/* forms:*/
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 20px;
+  height: 55px;
+  line-height: 2;
+  color: #545871;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #e9dbda;
+  border-radius: 5px;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+
+.form-control:focus {
+  color: #545871;
+  background-color: #fff;
+  border-color: #e9dbda;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 219, 218, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(233, 219, 218, 0.25); }
+
+.form-control::-webkit-input-placeholder {
+  color: #ebd0ce;
+  opacity: 1; }
+
+.form-control:-ms-input-placeholder {
+  color: #ebd0ce;
+  opacity: 1;
+  font-size: 20px; }
+
+.form-control::-ms-input-placeholder {
+  color: #ebd0ce;
+  opacity: 1;
+  font-size: 20px; }
+
+.form-control::placeholder {
+  color: #ebd0ce;
+  opacity: 1;
+  font-size: 20px; }
+
+/* form - custom radio buttons:*/
+/* This is the radio button default state */
+.custom-radio .custom-control-label::before {
+  background: #fff;
+  /* white */
+  border: 1px solid #545871;
+  border-radius: 50%; }
+
+/* This is the checked state */
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  background: #ebd0ce;
+  /* pink */
+  border: 1px solid #545871;
+  border-radius: 50%;
+  color: #545871; }
+
+/* active state i.e. displayed while the mouse is being pressed down */
+.custom-radio .custom-control-input:active ~ .custom-control-label::before {
+  color: #545871;
+  background: #c37e7b;
+  /* dark pink*/ }
+
+/* the shadow; displayed while the element is in focus */
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  /* pink, 25% opacity */ }
+
+/* select input:*/
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  line-height: 2;
+  color: #ebd0ce;
+  vertical-align: middle;
+  background: #fff url("../img/triangle-down-xl.png") no-repeat right 0.75rem center;
+  background-size: 28px 30px;
+  border: 1px solid #e9dbda;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.custom-select:focus {
+  border-color: #e9dbda;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 219, 218, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(233, 219, 218, 0.5); }
+
+.custom-select:focus::-ms-value {
+  color: #ebd0ce;
+  background-color: #fff; }
+
+.custom-select[multiple], .custom-select[size]:not([size="1"]) {
+  height: auto;
+  padding-right: 0.75rem;
+  background-image: none; }
+
+.custom-select:disabled {
+  color: #ebd0ce;
+  background-color: #fff; }
+
+.custom-select::-ms-expand {
+  opacity: 0; }
+
+.custom-select-sm {
+  height: 55px;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 20px; }
+
+.custom-select-lg {
+  height: 55px;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 20px; }
+
 /*modal*/
 @media only screen and (min-width: 1450px) {
   .modal-dialog {
     max-width: 1450px; } }
+@media only screen and (min-width: 1400px) {
+  .modal-dialog {
+    max-width: 1400px; } }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .modal-dialog {
+    max-width: 1200px; } }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .modal-dialog {
+    max-width: 950px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .modal-dialog {
+    max-width: 700px; } }
+
+.modal-content {
+  border-radius: 0; }
 
 .modal-body {
   padding: 0; }
@@ -130,14 +270,41 @@ button:focus {
     @media only screen and (min-width: 1450px) {
       .modal-body .section-signup__page1-left {
         min-height: 900px; } }
+    @media only screen and (min-width: 1400px) {
+      .modal-body .section-signup__page1-left {
+        min-height: 500px; } }
+    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+      .modal-body .section-signup__page1-left {
+        min-height: 400px; } }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .modal-body .section-signup__page1-left {
+        min-height: 300px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .modal-body .section-signup__page1-left {
+        background-image: url("../img/dog_01_sm.png"); } }
   .modal-body .section-signup__page1-left-brand {
-    padding-top: 30px;
-    padding-left: 50px; }
-  .modal-body .section-signup__page1-left-brand a {
-    text-decoration: none;
-    color: #fff; }
+    padding-top: 80px;
+    padding-left: 150px; }
+    .modal-body .section-signup__page1-left-brand a {
+      text-decoration: none;
+      color: #fff; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .modal-body .section-signup__page1-left-brand {
+        padding-top: 50px;
+        padding-left: 80px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .modal-body .section-signup__page1-left-brand {
+        padding-top: 20px;
+        padding-left: 20px; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .modal-body .section-signup__page1-left-brand {
+        padding-top: 10px;
+        padding-left: 10px; }
+        .modal-body .section-signup__page1-left-brand a {
+          font-size: 16px; } }
   .modal-body .section-signup__page1-left-breadcrumbs {
-    padding-top: 70px; }
+    padding-top: 140px;
+    padding-left: 20px; }
     .modal-body .section-signup__page1-left-breadcrumbs .brearcrumb-img {
       text-align: right; }
     .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs {
@@ -148,15 +315,73 @@ button:focus {
         padding-bottom: 30px; }
         .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li a {
           text-decoration: none;
-          color: #fff; }
+          color: rgba(255, 255, 255, 0.7); }
+      .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li.active a {
+        text-decoration: none;
+        color: #fff; }
+    @media only screen and (min-width: 1450px) {
+      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+        font-size: 24px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+        font-size: 18px; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+        font-size: 18px; } }
+    @media only screen and (max-width: 575px) {
+      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+        font-size: 18px; } }
   .modal-body .petForm__body {
     background-color: #faeceb;
-    padding: 60px 100px; }
+    padding: 60px 80px 100px 120px;
+    /*media queries*/ }
     .modal-body .petForm__body h2 {
       font-size: 48px;
       color: #545871;
-      font-weight: bold; }
+      font-weight: bold;
+      padding-bottom: 50px; }
+    .modal-body .petForm__body label {
+      font-size: 20px; }
+    .modal-body .petForm__body .upload {
+      padding-top: 40px;
+      text-align: center; }
+    .modal-body .petForm__body .gender {
+      background-color: #fff;
+      border: 1px solid #e9dbda;
+      border-radius: 5px;
+      padding: 10px 45px 1px 45px; }
+    .modal-body .petForm__body .medStatus {
+      background-color: #fff;
+      border: 1px solid #e9dbda;
+      border-radius: 5px;
+      padding: 10px 45px 1px 15px; }
+    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+      .modal-body .petForm__body {
+        padding: 60px 70px 100px 110px; }
+        .modal-body .petForm__body h2 {
+          font-size: 34px; } }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .modal-body .petForm__body {
+        padding: 30px 30px 50px 60px; }
+        .modal-body .petForm__body h2 {
+          font-size: 34px; }
+        .modal-body .petForm__body label {
+          font-size: 16px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .modal-body .petForm__body {
+        padding: 30px 10px 30px 10px; }
+        .modal-body .petForm__body h2 {
+          font-size: 28px; }
+        .modal-body .petForm__body label {
+          font-size: 14px; }
+        .modal-body .petForm__body .gender {
+          padding: 5px 35px 0px 15px; }
+        .modal-body .petForm__body .medStatus {
+          padding: 5px 0px 0px 5px; } }
   .modal-body .petForm__footer {
-    background-color: #fff; }
+    background-color: #fff;
+    padding: 20px 125px; }
+    .modal-body .petForm__footer button {
+      padding: 15px 50px; }
 
 /*# sourceMappingURL=bootstrap_skin.css.map */

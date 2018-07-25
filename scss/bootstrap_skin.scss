@@ -118,21 +118,172 @@ button:focus {
 
 /* card*/
 
-.card{
-  border-radius: 10px;
-}
+  .card{
+    border-radius: 10px;
+  }
 
-/* table:*/
 
-.table-bordered {
- 
-}
+/* forms:*/
+
+  .form-control {
+      display: block;
+      width: 100%;
+      padding: 0.375rem 0.75rem;
+      font-size: 20px;
+      height: 55px;
+      line-height: 2;
+      color: $d-g-amarant;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid $mauve-clair;
+      border-radius: 5px;
+      -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+      transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+      -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  }
+  .form-control:focus {
+    color: $d-g-amarant;
+    background-color: #fff;
+    border-color: $mauve-clair;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba($mauve-clair, 0.25);
+            box-shadow: 0 0 0 0.2rem rgba($mauve-clair, 0.25);
+  }
+  .form-control::-webkit-input-placeholder {
+    color: $pink;
+    opacity: 1;
+  }
+
+  .form-control:-ms-input-placeholder {
+    color: $pink;
+    opacity: 1;
+    font-size: 20px;
+  }
+
+  .form-control::-ms-input-placeholder {
+    color: $pink;
+    opacity: 1;
+    font-size: 20px;
+  }
+
+  .form-control::placeholder {
+    color: $pink;
+    opacity: 1;
+    font-size: 20px;
+  }
+
+/* form - custom radio buttons:*/
+/* This is the radio button default state */
+      .custom-radio .custom-control-label::before {
+          background: #fff;  /* white */
+          border: 1px solid #545871;
+          border-radius: 50%;
+      }
+      /* This is the checked state */
+      .custom-radio .custom-control-input:checked~.custom-control-label::before,
+      .custom-radio .custom-control-input:checked~.custom-control-label::after {
+          background: #ebd0ce;  /* pink */
+          border: 1px solid #545871;
+          border-radius: 50%;
+          color: #545871;
+      }
+      /* active state i.e. displayed while the mouse is being pressed down */
+      .custom-radio .custom-control-input:active ~ .custom-control-label::before {
+          color: #545871;
+          background: #c37e7b; /* dark pink*/
+      }
+          
+      /* the shadow; displayed while the element is in focus */
+      .custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+          -webkit-box-shadow: none;
+                  box-shadow: none; /* pink, 25% opacity */
+      }
+
+/* select input:*/
+  .custom-select {
+    display: inline-block;
+    width: 100%;
+    height: 55px;
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    line-height: 2;
+    color: $pink;
+    vertical-align: middle;
+    background: #fff url("../img/triangle-down-xl.png") no-repeat right 0.75rem center;
+    background-size: 28px 30px;
+    border: 1px solid $mauve-clair;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .custom-select:focus {
+    border-color: $mauve-clair;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba($mauve-clair, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba($mauve-clair, 0.5);
+  }
+
+  .custom-select:focus::-ms-value {
+    color: $pink;
+    background-color: #fff;
+  }
+
+  .custom-select[multiple], .custom-select[size]:not([size="1"]) {
+    height: auto;
+    padding-right: 0.75rem;
+    background-image: none;
+  }
+
+  .custom-select:disabled {
+    color: $pink;
+    background-color: #fff;
+  }
+
+  .custom-select::-ms-expand {
+    opacity: 0;
+  }
+
+  .custom-select-sm {
+    height: 55px;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    font-size: 20px;
+  }
+
+  .custom-select-lg {
+    height: 55px;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    font-size: 20px;
+  }
+
+
+
 
 /*modal*/
 .modal-dialog{
   @include very-lg-screens {
     max-width: 1450px;    
   }
+  @include xx-lg-screens {
+    max-width: 1400px;    
+  }
+  @include x-lg-screens {
+    max-width: 1200px;    
+  }
+  @include lg-screens {
+    max-width: 950px;    
+  }
+  @include md-screens {
+    max-width: 700px;    
+  }
+
+}
+.modal-content{
+  border-radius: 0;
 }
 .modal-body {
   padding: 0;
@@ -147,17 +298,45 @@ button:focus {
     @include very-lg-screens {
       min-height: 900px;  
     }
+    @include xx-lg-screens {
+      min-height: 500px;  
+    }
+    @include x-lg-screens {
+      min-height: 400px;
+    }
+    @include lg-screens {
+      min-height: 300px;    
+    }
+    @include md-screens {
+      background-image: url("../img/dog_01_sm.png");   
+    }
   }
   .section-signup__page1-left-brand{
-    padding-top: 30px;
-    padding-left:50px;
-  }
-  .section-signup__page1-left-brand a{
-    text-decoration: none;
-    color:  #fff;
+    padding-top: 80px;
+    padding-left:150px;
+    a{
+      text-decoration: none;
+      color:  #fff;
+    }
+    @include lg-screens {
+      padding-top: 50px;
+      padding-left:80px;    
+    }
+    @include md-screens {
+      padding-top: 20px;
+      padding-left:20px;    
+    }
+    @include sm-screens {
+      padding-top: 10px;
+      padding-left:10px;
+      a{
+        font-size: 16px;
+      }    
+    }
   }
   .section-signup__page1-left-breadcrumbs {
-    padding-top: 70px;
+    padding-top: 140px;
+    padding-left: 20px;
     .brearcrumb-img{
       text-align: right;
     }
@@ -169,9 +348,35 @@ button:focus {
         padding-bottom: 30px;
         a{
           text-decoration: none;
-          color: #fff;
+          color: rgba( #fff, .7) ;
         }
       }
+      li.active{
+        a{
+          text-decoration: none;
+          color: #fff ;
+        }
+      }      
+    }
+    @include very-lg-screens {
+      ul li a{
+        font-size: 24px;
+      }   
+    }
+    @include md-screens {
+      ul li a{
+        font-size: 18px;
+      }    
+    }
+    @include sm-screens {
+      ul li a{
+        font-size: 18px;
+      }    
+    }
+    @include xs-screens {
+      ul li a{
+        font-size: 18px;
+      }    
     }
   }
   .section-signup__page1-form {
@@ -179,14 +384,79 @@ button:focus {
   }
   .petForm__body{
     background-color: $light-pink;
-    padding: 60px 100px;
+    padding: 60px 80px 100px 120px;
+
     h2{
       font-size: 48px;
       color: $d-g-amarant;
       font-weight: bold;
+      padding-bottom: 50px;
+    }
+    label{
+      font-size: 20px;
+    }
+    .upload{
+      padding-top: 40px;
+      text-align: center;
+    }
+    .gender {
+      background-color: #fff;
+      border: 1px solid $mauve-clair;
+      border-radius: 5px;
+      padding: 10px 45px 1px 45px;
     } 
+    .medStatus {
+      background-color: #fff;
+      border: 1px solid $mauve-clair;
+      border-radius: 5px;
+      padding: 10px 45px 1px 15px;
+    }
+    /*media queries*/
+      @include xx-lg-screens {
+        
+      }
+      @include x-lg-screens {
+        padding: 60px 70px 100px 110px;
+        h2{
+          font-size: 34px;
+        }
+      }
+      @include lg-screens {
+        padding: 30px 30px 50px 60px;
+        h2{
+          font-size: 34px;
+        }
+        label{
+          font-size: 16px;
+        }
+      }
+      @include md-screens {
+        padding: 30px 10px 30px 10px;
+        h2{
+          font-size: 28px;
+        }
+        label{
+          font-size: 14px;
+        }
+        .gender {
+          padding: 5px 35px 0px 15px;
+        } 
+        .medStatus {
+          padding: 5px 0px 0px 5px;
+        }
+      }
+      @include sm-screens {
+            
+      }
+      @include xs-screens {
+          
+      }
   }
   .petForm__footer{
     background-color: #fff;
+    padding: 20px 125px;
+    button{
+      padding: 15px 50px;
+    }
   }
 }

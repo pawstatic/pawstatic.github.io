@@ -65,7 +65,10 @@
             We care for<br> your furry little<br> loved ones<br> while<br> you're away
           </h1>
           <div class="top-header__signUp">
-            <button class="btn btn-outline-primary ">Sign Up</button>
+            <button class="btn btn-outline-primary" 
+                  data-toggle="modal" data-target="#signUp">  
+              Sign Up
+            </button>
           </div>          
         </div>
         
@@ -97,7 +100,9 @@
           <p>
             We know how stressful it is to leave your pets at home alone. We’re a team of experienced animal caregivers, well connected to local veterinarians. Trust to us to love them like our own, and to keep them safe and happy till you’re home.
           </p> 
-          <button class="btn btn-primary">Sign Up</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+            Sign Up
+          </button>
         </div>
         <!-- class="d-none" Bootstrap4 helper class : don't display on xs-md screens -->
         <div class="section1__gallery col-lg-6 d-none d-sm-none d-md-none d-lg-block">
@@ -143,7 +148,9 @@
             Schedule one-off or recurring home visits. An experienced member of our team will spend time with your pet, feed them, change cat litter trays, take the dog for a walk, and anything else you need.
           </p>
           <div class="section2__signUp">
-            <button class="btn btn-primary">Sign Up</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+              Sign Up
+            </button>
           </div>          
         </div>
       </div>        
@@ -322,7 +329,7 @@
       </div>      
       <div class="row">
         <div class="section3__signUp col-lg-12 text-center">
-            <button class="btn btn-info">
+            <button class="btn btn-info" data-toggle="modal" data-target="#signUp">
               Sign Up
             </button>
         </div>
@@ -399,7 +406,7 @@
       </div>
       <div class="row">
         <div class="section4__signUp col-lg-12">
-          <button class="btn btn-primary">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#signUp">
             Sign Up
           </button>
         </div>
@@ -426,7 +433,7 @@
 <!-- ==================================== FOOTER END ============================ -->
 <!-- ==================================== MODAL: ============================ -->
 <div class="modal fade" id="signUp" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">      
       <div class="modal-body">
       <!--start content, see styles in bootstrap_skin.scss--> 
@@ -466,7 +473,7 @@
                     </div>
                     <div class="col-8">
                       <ul class="breadcrumbs">
-                        <li><a href="#">Pet basics</a></li>
+                        <li class="active"><a href="#">Pet basics</a></li>
                         <li><a href="#">Payment details</a></li>
                         <li><a href="#">Confirm</a></li>
                       </ul>
@@ -474,17 +481,119 @@
                   </div>
               </div>                          
             </div>
-            <div class="section-signup__page1-form col-7 ">
-              <form class="petForm">
-                
-                <div class="row">
-                  <div class="col-12 petForm__body">
-                    <h2>Yay, we love dogs! Give us the basics about your pup.</h2>
+            <div class="section-signup__page1-form col-7 pl-0 pr-0">
+              <form class="petForm form">
+                <div class="petForm__body">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2>Yay, we love dogs! Give us the basics about your pup.</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" placeholder="Pet's name"
+                               class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="upload">
+                          <img src="img/upload.png" class="img-fluid">
+                          <input type="file" style="display: none;">
+                          Upload a photo
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <label for="breed">Breed</label>
+                      <input type="text" name="breed" class="form-control" 
+                            placeholder="Pet's breed">
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="dob">Birthday</label>
+                      <input type="date" name="dob" class="form-control" 
+                            placeholder="DD/MM/YYY">
+                    </div>
+                  </div>
+                  <div class="row pt-4">
+                    <div class="col-md-6">
+                      <label>Gender</label>
+                      <div class="gender">
+                        <table >
+                          <tr>
+                            <td>
+                              <div class="custom-control custom-radio col-6 ">
+                                <input type="radio" id="female" name="gender" 
+                                        class="custom-control-input" checked="" value="female">
+                                <label class="custom-control-label" for="female">Female</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-control custom-radio col-6">
+                                <input type="radio" id="male" name="gender" 
+                                        class="custom-control-input" value="male">
+                                <label class="custom-control-label" for="male">
+                                  Male
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>                                         
+                    </div>
+                    <div class="col-md-6">
+                      <label>Spayed or Neutered</label>
+                      <div class="medStatus">
+                        <table >
+                          <tr>
+                            <td>
+                              <div class="custom-control custom-radio col-6 ">
+                                <input type="radio" id="spayed" name="status" 
+                                      class="custom-control-input" checked="" 
+                                      value="spayed">
+                                <label class="custom-control-label" for="spayed">
+                                  Spayed
+                                </label>
+                              </div>
+                            </td>
+                            <td class="text-left">
+                              <div class="custom-control custom-radio col-6">
+                                <input type="radio" id="neutered" 
+                                      name="status" class="custom-control-input" 
+                                      value="neutered">
+                                <label class="custom-control-label" for="neutered">
+                                  Neutered
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="row pt-4">
+                    <div class="col-12">
+                      <label for="weight"> Weight</label>
+                      <select class="custom-select">
+                        <option selected="" value="50-100">50-100 lbs</option>
+                        <option value="100-120">100-120 lbs</option>
+                        <option value="120-150">120-150 lbs</option>
+                        <option value="150-200">150-200 lbs</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row pl-3 pr-3">
                   <div class="col-12 petForm__footer">
-                    
+                    <button class="btn btn-outline-primary  btn-lg" 
+                            class="close" data-dismiss="modal" aria-label="Close">
+                          EXIT
+                    </button>
+                    <button class="btn btn-primary btn-lg pull-right">NEXT</button>
                   </div>
                 </div>
               </form>
