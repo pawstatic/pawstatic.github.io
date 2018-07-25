@@ -115,13 +115,21 @@ button:focus {
 
 /* table:*/
 /*modal*/
+@media only screen and (min-width: 1450px) {
+  .modal-dialog {
+    max-width: 1450px; } }
+
 .modal-body {
   padding: 0; }
+  .modal-body .section-signup {
+    padding-right: 15px; }
   .modal-body .section-signup__page1-left {
     background-image: url("../img/dog_01.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 600px; }
+    background-repeat: no-repeat; }
+    @media only screen and (min-width: 1450px) {
+      .modal-body .section-signup__page1-left {
+        min-height: 900px; } }
   .modal-body .section-signup__page1-left-brand {
     padding-top: 30px;
     padding-left: 50px; }
@@ -141,11 +149,13 @@ button:focus {
         .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li a {
           text-decoration: none;
           color: #fff; }
-  .modal-body .section-signup__page1-form h2 {
-    font-size: 48px;
-    color: #545871; }
   .modal-body .petForm__body {
-    background-color: #faeceb; }
+    background-color: #faeceb;
+    padding: 60px 100px; }
+    .modal-body .petForm__body h2 {
+      font-size: 48px;
+      color: #545871;
+      font-weight: bold; }
   .modal-body .petForm__footer {
     background-color: #fff; }
 

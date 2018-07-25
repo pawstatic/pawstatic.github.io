@@ -34,6 +34,11 @@
         @content;
     }
 }
+@mixin very-lg-screens{
+    @media only screen and(min-width: 1450px) {
+        @content;
+    }
+}
 
 @mixin google-font($font){
     $font: unquote($font);

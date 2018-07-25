@@ -129,13 +129,24 @@ button:focus {
 }
 
 /*modal*/
+.modal-dialog{
+  @include very-lg-screens {
+    max-width: 1450px;    
+  }
+}
 .modal-body {
   padding: 0;
+  .section-signup{
+    padding-right: 15px;
+  }
   .section-signup__page1-left {
     background-image: url("../img/dog_01.png");
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 600px;
+    
+    @include very-lg-screens {
+      min-height: 900px;  
+    }
   }
   .section-signup__page1-left-brand{
     padding-top: 30px;
@@ -162,16 +173,18 @@ button:focus {
         }
       }
     }
-
   }
   .section-signup__page1-form {
-    h2{
-      font-size: 48px;
-      color: $d-g-amarant;
-    }    
+       
   }
   .petForm__body{
     background-color: $light-pink;
+    padding: 60px 100px;
+    h2{
+      font-size: 48px;
+      color: $d-g-amarant;
+      font-weight: bold;
+    } 
   }
   .petForm__footer{
     background-color: #fff;
