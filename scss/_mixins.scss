@@ -14,8 +14,18 @@
         @content;
     }
 }
+@mixin sm-screens-andless{
+    @media only screen and(max-width: 767px) {
+        @content;
+    }
+}
 @mixin md-screens{
     @media only screen and(min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin md-screens-andless{
+    @media only screen and(max-width: 991px) {
         @content;
     }
 }

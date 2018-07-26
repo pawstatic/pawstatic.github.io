@@ -436,23 +436,27 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">      
       <div class="modal-body">
-      <!--start content, see styles in bootstrap_skin.scss--> 
+      <!--start content, see styles in bootstrap_skin.scss line:312;
+       the Sign_up module style is in the bootstrap_skin.scss file, because it is within the bootstrap feature-modal-->
         <div class="section-signup">
           <div class="row">
-            <div class="section-signup__page1-left col-5">
+            <div class="section-signup__page1-left col-md-5 col-sm-4 col-12">
               <div class="row">
-                <div class="section-signup__page1-left-brand col-12">
+                <div class="section-signup__page1-left-brand col-12 d-none d-sm-block">
                   <a href="#">
-                    <img src="img/paw-pink.png" class="img-fluid float-left pr-3">
+                    <img src="img/paw-pink-xs.png" 
+                    class="img-fluid float-left ml-2 mt-2 pr-2 d-md-none">
+                    <img src="img/paw-pink.png" 
+                    class="img-fluid float-left pr-3 d-sm-none d-md-block">
                     <p class="pt-3">PAWSTATIC</p>
                   </a>
                 </div>
               </div>
               <div class="section-signup__page1-left-breadcrumbs">
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="brearcrumb-img">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 177" width="40" height="177">
+                  <div class="row no-gutters">
+                    <div class="col-md-4 col-sm-2 col-1">
+                      <div class="breadcrumb-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 177" width="40" height="177" class="pull-right">
                           <defs>
                             <image width="3" height="161" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAChCAMAAAA1IvVoAAACAVBMVEUAAACUlqVmZpmVl6ZVVVWUlqWUlqWOjo6Li6KVl6WHlqWUlKGUl6aSkp6Vl6aPj6OOjqGUlqaUlKWVl6aPj5+PlqWVlaOUlqaTk6aUlKCUlqWTk6SSkqOVl6WTk6KSkqWSlqSRlaOVlaaUlqaSlqOSlqaRlaWUlqaTl6KSlaSVlaOTlqSSlqOSlaaUlqWTlqaSlaWVl6WTl6aTlqWUlKWVl6aUl6WUlqaTlqSVl6WVlaWUl6WUlqSVlaWTlqSUl6WTlaWVlaSUlqWTlqSUlqWVlqWUl6WUlqSVl6aVlaWUl6WVlqWVlaWVlqWUlqaTlaWUl6aUlqaUlqWUlqWVl6aTlaSVlqaTlaaVl6WVl6WUlqaUlqaTlaWUlqSTlaWUl6aVl6SUlqWTlaSVl6WUlqWUlqaVl6aUlqSVlqWUlaaUlqWUlqaVl6WUl6WUl6aTl6WUlqWVl6SUlqWUlqWUl6SVlqWTl6aUl6aUlaWUlqaVlqWUlqWUlaaVl6WUlqWUlqaUl6WVlqWUl6WUlqaUlqWUl6WVlqaVlqaUl6WUl6WVlqaTl6aUlqaVlqWVlqaUl6aUl6WVlqaUl6aUl6aUlqWUlqWVlqWVlqaUl6WVlqWVlqWUl6WVlqaUl6WUl6WVlqWVlqWVlqWVlqWVlqWUl6WUlqWUl6WUlqaVlqWUlqaTlaZId88BAAAAq3RSTlMAuAX/A/TvCQvyERP5FfwZG/gf/iAiJPMoK/0tL/o0Njg6PPs9P0HnQkZISUtN4FBS91NVT99Y9lr1W11fYFzjY2VmaPHpaWvwbG7Yce5ydO11d+x4duJ7633qfoB5guiEhYfmiOWJgcyMjY+Q4cuTlJXelpjdmtyRyJzbndqe2Z+XzaCi16PWpNXRptSo06nSxavQrM+vzrCyqsG0ybXAtse+ucSzvL2tsWqaKrIpAAABcUlEQVR4nF3S+TOWURjG8S9KZU2FCMnSQptsKZG1KFqIStIma5aobFFCRdm9vYSKivyVXY9zfuGZ+cw1Z+a+n/vcMweczwM8vWDHTpvesEu527EHfJS+4uMH/l7bBECgcq8VGAT79sMBK1hCnAyFg8qwcDgkEY5IiAowDku0dcRJzY2JhTiJt46qPu4YHFeekATdJ1FOyinNTTwNZ5Rnk4xzVrKkpEJaOpzPgAtyUTK17yXJyobLoUaO5uZaeflGTgEUKq9cNYqsYsm9BtdLoFRu3IRbcrsMyuVOBVTeNe7dN6rkQYFRrd6HNfBIOz2WJ0/hWS08l7p6aNC9Gq2mCqP5hepboFW7tmmn9pfQIZ2v4PUb6OqGnl7oe2v0D8A7zXk/CB+UQ8PGyEfj02edR2Hsi/F1HCYm1TMF0zMwOweub+BW/7zmLnyHxSVjWbPcP+Dnr61cK3pS6l/9rX/8gb/qWVPdugtWlO5/JjeKN1/ffyq8XX01VqIlAAAAAElFTkSuQmCC"/>
                             <image width="24" height="24" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAALVBMVEWVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6aVl6YVYaIfAAAAD3RSTlMAIG+vz/+fUO9goHCw0PBF4cFYAAAAfElEQVR4nGNgYGBgVHYNMRJgAAPG1FAgCIPwKkLBoB3E5gyFgglATimMEw7U0QrjRAgwcIXCwQIGUQQnkGErghPNcBTBiWG4iuCEMIQiAVQOkrJYVANQjEaxFMU5jE9h7DgBVC+geo6hDsJ+DgmQpSB2FCx49lyNPQ1iAwC62VWza9NaVgAAAABJRU5ErkJggg=="/>
@@ -471,17 +475,17 @@
                         </svg>
                       </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-md-8 col-sm-10 col-11">
                       <ul class="breadcrumbs">
-                        <li class="active"><a href="#">Pet basics</a></li>
-                        <li><a href="#">Payment details</a></li>
-                        <li><a href="#">Confirm</a></li>
+                        <li class="active pl-1"><a href="#">Pet basics</a></li>
+                        <li class="pl-1"><a href="#">Payment details</a></li>
+                        <li class="pl-1"><a href="#">Confirm</a></li>
                       </ul>
                     </div>
                   </div>
               </div>                          
             </div>
-            <div class="section-signup__page1-form col-7 pl-0 pr-0">
+            <div class="section-signup__page1-form col-md-7 col-sm-8 col-12 pl-0 pr-0">
               <form class="petForm form">
                 <div class="petForm__body">
                   <div class="row">
@@ -490,14 +494,14 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                       <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" name="name" placeholder="Pet's name"
                                class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                       <div class="form-group">
                         <label class="upload">
                           <img src="img/upload.png" class="img-fluid">
@@ -508,19 +512,19 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                       <label for="breed">Breed</label>
                       <input type="text" name="breed" class="form-control" 
                             placeholder="Pet's breed">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                       <label for="dob">Birthday</label>
                       <input type="date" name="dob" class="form-control" 
                             placeholder="DD/MM/YYY">
                     </div>
                   </div>
                   <div class="row pt-4">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12 col-8">
                       <label>Gender</label>
                       <div class="gender">
                         <table >
@@ -545,7 +549,7 @@
                         </table>
                       </div>                                         
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12 col-8">
                       <label>Spayed or Neutered</label>
                       <div class="medStatus">
                         <table >

@@ -131,6 +131,10 @@ button:focus {
   -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+  @media only screen and (max-width: 991px) {
+    .form-control {
+      height: 38px;
+      font-size: 16px; } }
 
 .form-control:focus {
   color: #545871;
@@ -143,21 +147,33 @@ button:focus {
 .form-control::-webkit-input-placeholder {
   color: #ebd0ce;
   opacity: 1; }
+  @media only screen and (max-width: 991px) {
+    .form-control::-webkit-input-placeholder {
+      font-size: 16px; } }
 
 .form-control:-ms-input-placeholder {
   color: #ebd0ce;
   opacity: 1;
   font-size: 20px; }
+  @media only screen and (max-width: 991px) {
+    .form-control:-ms-input-placeholder {
+      font-size: 16px; } }
 
 .form-control::-ms-input-placeholder {
   color: #ebd0ce;
   opacity: 1;
   font-size: 20px; }
+  @media only screen and (max-width: 991px) {
+    .form-control::-ms-input-placeholder {
+      font-size: 16px; } }
 
 .form-control::placeholder {
   color: #ebd0ce;
   opacity: 1;
   font-size: 20px; }
+  @media only screen and (max-width: 991px) {
+    .form-control::placeholder {
+      font-size: 16px; } }
 
 /* form - custom radio buttons:*/
 /* This is the radio button default state */
@@ -189,6 +205,10 @@ button:focus {
   /* pink, 25% opacity */ }
 
 /* select input:*/
+@media only screen and (max-width: 991px) {
+  select {
+    font-size: 16px; } }
+
 .custom-select {
   display: inline-block;
   width: 100%;
@@ -203,7 +223,12 @@ button:focus {
   border-radius: 5px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; }
+  appearance: none;
+  /*media query*/ }
+  @media only screen and (max-width: 991px) {
+    .custom-select {
+      height: 38px;
+      padding: 0.175rem 1.75rem 0.175rem 0.75rem; } }
 
 .custom-select:focus {
   border-color: #e9dbda;
@@ -231,30 +256,45 @@ button:focus {
   height: 55px;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  font-size: 20px; }
+  font-size: 20px;
+  /*media query*/ }
+  @media only screen and (max-width: 991px) {
+    .custom-select-sm {
+      height: 38px;
+      padding-top: 0.175rem;
+      padding-bottom: 0.175rem;
+      font-size: 16px; } }
 
 .custom-select-lg {
   height: 55px;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 20px; }
+  @media only screen and (max-width: 991px) {
+    .custom-select-lg {
+      height: 38px;
+      padding-top: 0.175rem;
+      padding-bottom: 0.175rem;
+      font-size: 16px; } }
 
 /*modal*/
-@media only screen and (min-width: 1450px) {
-  .modal-dialog {
-    max-width: 1450px; } }
-@media only screen and (min-width: 1400px) {
-  .modal-dialog {
-    max-width: 1400px; } }
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .modal-dialog {
-    max-width: 1200px; } }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .modal-dialog {
-    max-width: 950px; } }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .modal-dialog {
-    max-width: 700px; } }
+.modal-dialog {
+  /*media query*/ }
+  @media only screen and (min-width: 1450px) {
+    .modal-dialog {
+      max-width: 1450px; } }
+  @media only screen and (min-width: 1400px) {
+    .modal-dialog {
+      max-width: 1400px; } }
+  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .modal-dialog {
+      max-width: 1200px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .modal-dialog {
+      max-width: 950px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .modal-dialog {
+      max-width: 700px; } }
 
 .modal-content {
   border-radius: 0; }
@@ -266,7 +306,8 @@ button:focus {
   .modal-body .section-signup__page1-left {
     background-image: url("../img/dog_01.png");
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    /*media queries*/ }
     @media only screen and (min-width: 1450px) {
       .modal-body .section-signup__page1-left {
         min-height: 900px; } }
@@ -279,12 +320,14 @@ button:focus {
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .modal-body .section-signup__page1-left {
         min-height: 300px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
+    @media only screen and (max-width: 991px) {
       .modal-body .section-signup__page1-left {
-        background-image: url("../img/dog_01_sm.png"); } }
+        background-image: none;
+        background-color: #545871; } }
   .modal-body .section-signup__page1-left-brand {
     padding-top: 80px;
-    padding-left: 150px; }
+    padding-left: 150px;
+    /*media queries*/ }
     .modal-body .section-signup__page1-left-brand a {
       text-decoration: none;
       color: #fff; }
@@ -304,9 +347,8 @@ button:focus {
           font-size: 16px; } }
   .modal-body .section-signup__page1-left-breadcrumbs {
     padding-top: 140px;
-    padding-left: 20px; }
-    .modal-body .section-signup__page1-left-breadcrumbs .brearcrumb-img {
-      text-align: right; }
+    padding-left: 20px;
+    /*media queries*/ }
     .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs {
       list-style-type: none;
       padding-left: 0; }
@@ -325,12 +367,28 @@ button:focus {
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .modal-body .section-signup__page1-left-breadcrumbs ul li a {
         font-size: 18px; } }
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
-        font-size: 18px; } }
+    @media only screen and (max-width: 767px) {
+      .modal-body .section-signup__page1-left-breadcrumbs {
+        padding-left: 5px; }
+        .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+          font-size: 14px; }
+        .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li {
+          padding-bottom: 0; }
+        .modal-body .section-signup__page1-left-breadcrumbs svg {
+          width: 97%;
+          height: 97%;
+          padding-top: 15px; } }
     @media only screen and (max-width: 575px) {
-      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
-        font-size: 18px; } }
+      .modal-body .section-signup__page1-left-breadcrumbs {
+        padding-top: 20px;
+        padding-left: 50px; }
+        .modal-body .section-signup__page1-left-breadcrumbs ul li {
+          display: inline-block;
+          margin-right: 10px; }
+          .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+            font-size: 18px; }
+        .modal-body .section-signup__page1-left-breadcrumbs svg {
+          display: none; } }
   .modal-body .petForm__body {
     background-color: #faeceb;
     padding: 60px 80px 100px 120px;
@@ -367,21 +425,53 @@ button:focus {
           font-size: 34px; }
         .modal-body .petForm__body label {
           font-size: 16px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
+    @media only screen and (max-width: 991px) {
       .modal-body .petForm__body {
         padding: 30px 10px 30px 10px; }
         .modal-body .petForm__body h2 {
-          font-size: 28px; }
+          font-size: 24px;
+          padding-bottom: 20px; }
         .modal-body .petForm__body label {
           font-size: 14px; }
+        .modal-body .petForm__body .upload {
+          padding-top: 35px; }
+          .modal-body .petForm__body .upload img {
+            height: 30%;
+            width: 30%; }
         .modal-body .petForm__body .gender {
           padding: 5px 35px 0px 15px; }
         .modal-body .petForm__body .medStatus {
           padding: 5px 0px 0px 5px; } }
+    @media only screen and (max-width: 575px) {
+      .modal-body .petForm__body .gender {
+        padding: 5px 0px 0px 15px; }
+      .modal-body .petForm__body .medStatus {
+        padding: 5px 0px 0px 5px; } }
   .modal-body .petForm__footer {
     background-color: #fff;
-    padding: 20px 125px; }
+    padding: 20px 125px;
+    /*media query*/ }
     .modal-body .petForm__footer button {
       padding: 15px 50px; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .modal-body .petForm__footer {
+        padding: 20px 50px; }
+        .modal-body .petForm__footer button {
+          padding: 5px 30px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .modal-body .petForm__footer {
+        padding: 20px 50px; }
+        .modal-body .petForm__footer button {
+          padding: 5px 30px; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .modal-body .petForm__footer {
+        padding: 20px 10px; }
+        .modal-body .petForm__footer button {
+          padding: 5px 20px; } }
+    @media only screen and (max-width: 575px) {
+      .modal-body .petForm__footer {
+        padding: 20px 5px; }
+        .modal-body .petForm__footer button {
+          padding: 15px 30px; } }
 
 /*# sourceMappingURL=bootstrap_skin.css.map */

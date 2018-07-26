@@ -142,6 +142,10 @@ button:focus {
       -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+      @include md-screens-andless {
+        height: 38px;
+        font-size: 16px;
+      }
   }
   .form-control:focus {
     color: $d-g-amarant;
@@ -154,24 +158,36 @@ button:focus {
   .form-control::-webkit-input-placeholder {
     color: $pink;
     opacity: 1;
+    @include md-screens-andless {
+      font-size: 16px;
+    }
   }
 
   .form-control:-ms-input-placeholder {
     color: $pink;
     opacity: 1;
     font-size: 20px;
+    @include md-screens-andless {
+      font-size: 16px;
+    }
   }
 
   .form-control::-ms-input-placeholder {
     color: $pink;
     opacity: 1;
     font-size: 20px;
+    @include md-screens-andless {
+      font-size: 16px;
+    }
   }
 
   .form-control::placeholder {
     color: $pink;
     opacity: 1;
     font-size: 20px;
+    @include md-screens-andless {
+      font-size: 16px;
+    }
   }
 
 /* form - custom radio buttons:*/
@@ -202,6 +218,11 @@ button:focus {
       }
 
 /* select input:*/
+  select{
+    @include md-screens-andless {
+        font-size: 16px;
+    }
+  }
   .custom-select {
     display: inline-block;
     width: 100%;
@@ -217,6 +238,12 @@ button:focus {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    /*media query*/
+    @include md-screens-andless {
+        height: 38px;
+        padding: 0.175rem 1.75rem 0.175rem 0.75rem;
+    }
+    
   }
 
   .custom-select:focus {
@@ -251,6 +278,13 @@ button:focus {
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;
     font-size: 20px;
+    /*media query*/
+    @include md-screens-andless {
+      height: 38px;
+      padding-top: 0.175rem;
+      padding-bottom: 0.175rem;
+      font-size: 16px;
+    }    
   }
 
   .custom-select-lg {
@@ -258,6 +292,12 @@ button:focus {
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;
     font-size: 20px;
+    @include md-screens-andless {
+      height: 38px;
+      padding-top: 0.175rem;
+      padding-bottom: 0.175rem;
+      font-size: 16px;
+    }
   }
 
 
@@ -265,6 +305,7 @@ button:focus {
 
 /*modal*/
 .modal-dialog{
+/*media query*/
   @include very-lg-screens {
     max-width: 1450px;    
   }
@@ -294,22 +335,23 @@ button:focus {
     background-image: url("../img/dog_01.png");
     background-size: cover;
     background-repeat: no-repeat;
-    
-    @include very-lg-screens {
-      min-height: 900px;  
-    }
-    @include xx-lg-screens {
-      min-height: 500px;  
-    }
-    @include x-lg-screens {
-      min-height: 400px;
-    }
-    @include lg-screens {
-      min-height: 300px;    
-    }
-    @include md-screens {
-      background-image: url("../img/dog_01_sm.png");   
-    }
+    /*media queries*/
+      @include very-lg-screens {
+        min-height: 900px;  
+      }
+      @include xx-lg-screens {
+        min-height: 500px;  
+      }
+      @include x-lg-screens {
+        min-height: 400px;
+      }
+      @include lg-screens {
+        min-height: 300px;    
+      }
+      @include md-screens-andless {
+        background-image: none;
+        background-color: $d-g-amarant;   
+      }
   }
   .section-signup__page1-left-brand{
     padding-top: 80px;
@@ -318,28 +360,27 @@ button:focus {
       text-decoration: none;
       color:  #fff;
     }
-    @include lg-screens {
-      padding-top: 50px;
-      padding-left:80px;    
-    }
-    @include md-screens {
-      padding-top: 20px;
-      padding-left:20px;    
-    }
-    @include sm-screens {
-      padding-top: 10px;
-      padding-left:10px;
-      a{
-        font-size: 16px;
-      }    
-    }
+    /*media queries*/
+      @include lg-screens {
+        padding-top: 50px;
+        padding-left:80px;    
+      }
+      @include md-screens {
+        padding-top: 20px;
+        padding-left:20px;    
+      }
+      @include sm-screens {
+        padding-top: 10px;
+        padding-left:10px;
+        a{
+          font-size: 16px;
+        }    
+      }
+      
   }
   .section-signup__page1-left-breadcrumbs {
     padding-top: 140px;
     padding-left: 20px;
-    .brearcrumb-img{
-      text-align: right;
-    }
     ul.breadcrumbs{
       list-style-type: none;
       padding-left: 0;
@@ -358,26 +399,45 @@ button:focus {
         }
       }      
     }
-    @include very-lg-screens {
-      ul li a{
-        font-size: 24px;
-      }   
-    }
-    @include md-screens {
-      ul li a{
-        font-size: 18px;
-      }    
-    }
-    @include sm-screens {
-      ul li a{
-        font-size: 18px;
-      }    
-    }
-    @include xs-screens {
-      ul li a{
-        font-size: 18px;
-      }    
-    }
+    /*media queries*/
+      @include very-lg-screens {
+        ul li a{
+          font-size: 24px;
+        }   
+      }
+      @include md-screens {
+        ul li a{
+          font-size: 18px;
+        }    
+      }
+      @include sm-screens-andless {
+        padding-left: 5px;
+        ul li a{
+          font-size: 14px;
+        }
+        ul.breadcrumbs li{
+          padding-bottom: 0;
+        }
+        svg {
+          width: 97%;
+          height: 97% ;
+          padding-top: 15px;
+        }     
+      }
+      @include xs-screens {
+        padding-top: 20px;
+        padding-left: 50px;
+        ul li{
+          display: inline-block;
+          margin-right: 10px;
+          a{
+            font-size: 18px;
+          }
+        } 
+         svg{
+          display: none;
+         }
+      }
   }
   .section-signup__page1-form {
        
@@ -411,10 +471,7 @@ button:focus {
       border-radius: 5px;
       padding: 10px 45px 1px 15px;
     }
-    /*media queries*/
-      @include xx-lg-screens {
-        
-      }
+    /*media queries*/     
       @include x-lg-screens {
         padding: 60px 70px 100px 110px;
         h2{
@@ -430,13 +487,21 @@ button:focus {
           font-size: 16px;
         }
       }
-      @include md-screens {
+      @include md-screens-andless {
         padding: 30px 10px 30px 10px;
         h2{
-          font-size: 28px;
+          font-size: 24px;
+          padding-bottom: 20px;
         }
         label{
           font-size: 14px;
+        }
+        .upload {
+          padding-top: 35px;
+          img{
+            height: 30%;
+            width: 30%;
+          }
         }
         .gender {
           padding: 5px 35px 0px 15px;
@@ -445,11 +510,13 @@ button:focus {
           padding: 5px 0px 0px 5px;
         }
       }
-      @include sm-screens {
-            
-      }
       @include xs-screens {
-          
+        .gender {
+          padding: 5px 0px 0px 15px;
+        } 
+        .medStatus {
+          padding: 5px 0px 0px 5px;
+        }  
       }
   }
   .petForm__footer{
@@ -458,5 +525,31 @@ button:focus {
     button{
       padding: 15px 50px;
     }
-  }
+    /*media query*/
+
+        @include lg-screens {
+          padding: 20px 50px;
+          button{
+            padding: 5px 30px;
+          }
+        }
+        @include md-screens {
+          padding: 20px 50px;
+          button{
+            padding: 5px 30px;
+          }
+        }
+        @include sm-screens {
+          padding: 20px 10px;
+          button{
+            padding: 5px 20px;
+          }   
+        }
+        @include xs-screens {
+          padding: 20px 5px; 
+          button{
+            padding: 15px 30px;
+          } 
+        }
+      }
 }
