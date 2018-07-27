@@ -299,11 +299,60 @@ button:focus {
       font-size: 16px;
     }
   }
+/*checkbox*/
+    .custom-checkbox .custom-control-label::before {
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid $pink;
+    }
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: $pink;
+    }
+    .custom-control-input:active ~ .custom-control-label::before {
+        color: #fff;
+        background-color: $bordeau;
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+        color: #fff;
+        background-color: $bordeau;
+    }
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: $pink;
+    }
+
+    .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+      background-color: $bordeau;
+    }
+    .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+      background-color: rgba($pink, 0.5);
+    }
+    .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+      background-color: rgba($pink, 0.5);
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+      color: #fff;
+      background-color: $pink;
+    }
 
 
 
-
-/*modal*/
+/* badge:*/
+  .badge {
+      display: inline-block;
+      padding: 0.5em 1em;
+      font-size: 75%;
+      font-weight: 300;
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 16px;
+  }
+  .badge-info {
+      color: $d-g-amarant;
+      background-color: $light-pink;
+  }
+/*modal */
 .modal-dialog{
 /*media query*/
   @include very-lg-screens {
@@ -331,7 +380,8 @@ button:focus {
   .section-signup{
     padding-right: 15px;
   }
-  .section-signup__page1-left {
+/* Page: Sign Up - 1 */
+  .section-signup__page-left {
     background-image: url("../img/dog_01.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -353,7 +403,7 @@ button:focus {
         background-color: $d-g-amarant;   
       }
   }
-  .section-signup__page1-left-brand{
+  .section-signup__page-left-brand{
     padding-top: 80px;
     padding-left:150px;
     a{
@@ -378,7 +428,7 @@ button:focus {
       }
       
   }
-  .section-signup__page1-left-breadcrumbs {
+  .section-signup__page-left-breadcrumbs {
     padding-top: 140px;
     padding-left: 20px;
     ul.breadcrumbs{
@@ -389,7 +439,7 @@ button:focus {
         padding-bottom: 30px;
         a{
           text-decoration: none;
-          color: rgba( #fff, .7) ;
+          color: rgba( #fff, .7);
         }
       }
       li.active{
@@ -439,7 +489,7 @@ button:focus {
          }
       }
   }
-  .section-signup__page1-form {
+  .section-signup__page-form {
        
   }
   .petForm__body{
@@ -518,6 +568,7 @@ button:focus {
           padding: 5px 0px 0px 5px;
         }  
       }
+
   }
   .petForm__footer{
     background-color: #fff;
@@ -552,4 +603,104 @@ button:focus {
           } 
         }
       }
-}
+  }
+
+/*Page: Sign Up - 3*/
+  .signUp3 {
+    .section-signup__page-left{
+      background-image: url("../img/cat_01.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include md-screens-andless {
+        background-image: none;
+        background-color: $d-g-amarant;   
+      }
+    }
+    .petForm__body{
+      padding-bottom: 170px;
+    }
+  }
+  /* media query*/
+    @include very-lg-screens {
+      #expiry-yy{padding-top: 42px;}
+    }
+    @include xx-lg-screens {
+      #expiry-yy{padding-top: 42px;}
+    }
+    @include x-lg-screens {
+      #expiry-yy{padding-top: 42px;}
+    }
+    @include lg-screens {
+      #expiry-yy{padding-top: 42px;}
+    }
+    @include md-screens {
+      #expiry-yy{padding-top: 42px;}
+    }
+    @include sm-screens {
+       #expiry-yy {
+       padding-top: 50px;
+      }
+      #card-cvc {
+        padding-top: 10px;
+      }   
+    }
+    @include xs-screens {
+     #expiry-yy {
+       padding-top: 30px;
+      }
+    } 
+
+/* Page: Sign Up - 4*/
+  .signUp4 {
+    .section-signup__page-left{
+      background-image: url("../img/puppy_01.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include md-screens-andless {
+        background-image: none;
+        background-color: $d-g-amarant;   
+      }
+    }
+    .petForm__body{
+      padding-bottom: 170px;
+      h2{
+        padding-bottom: 72px;
+      }
+    }
+    .pet{
+      .pet-data{
+      text-align: center;
+      padding-bottom: 10px;
+      }
+      .pet-param{
+        font-size: 12px;
+        text-align: center;
+      }
+      
+    }
+
+    .pet__avatar {
+      text-align: center;
+      margin-bottom: 0;
+      img{
+        margin-top: -60px;
+      }
+    }
+    .pet__favourites {
+      text-align: center;
+      ul li {
+        display: inline-block;
+      }
+    }
+    .pet__addMore{
+      padding: 50px 0 0 150px;
+      a{
+        font-size: 20px;
+        color: $d-g-amarant;
+      }
+      @include md-screens-andless {
+        padding: 50px 5px 0px 20px;
+      }
+    }
+  }
+  

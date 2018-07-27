@@ -277,7 +277,56 @@ button:focus {
       padding-bottom: 0.175rem;
       font-size: 16px; } }
 
-/*modal*/
+/*checkbox*/
+.custom-checkbox .custom-control-label::before {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ebd0ce; }
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #ebd0ce; }
+
+.custom-control-input:active ~ .custom-control-label::before {
+  color: #fff;
+  background-color: #c37e7b; }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  background-color: #c37e7b; }
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #ebd0ce; }
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+  background-color: #c37e7b; }
+
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+  background-color: rgba(235, 208, 206, 0.5); }
+
+.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+  background-color: rgba(235, 208, 206, 0.5); }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  background-color: #ebd0ce; }
+
+/* badge:*/
+.badge {
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 75%;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 16px; }
+
+.badge-info {
+  color: #545871;
+  background-color: #faeceb; }
+
+/*modal */
 .modal-dialog {
   /*media query*/ }
   @media only screen and (min-width: 1450px) {
@@ -300,94 +349,95 @@ button:focus {
   border-radius: 0; }
 
 .modal-body {
-  padding: 0; }
+  padding: 0;
+  /* Page: Sign Up - 1 */ }
   .modal-body .section-signup {
     padding-right: 15px; }
-  .modal-body .section-signup__page1-left {
+  .modal-body .section-signup__page-left {
     background-image: url("../img/dog_01.png");
     background-size: cover;
     background-repeat: no-repeat;
     /*media queries*/ }
     @media only screen and (min-width: 1450px) {
-      .modal-body .section-signup__page1-left {
+      .modal-body .section-signup__page-left {
         min-height: 900px; } }
     @media only screen and (min-width: 1400px) {
-      .modal-body .section-signup__page1-left {
+      .modal-body .section-signup__page-left {
         min-height: 500px; } }
     @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-      .modal-body .section-signup__page1-left {
+      .modal-body .section-signup__page-left {
         min-height: 400px; } }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .modal-body .section-signup__page1-left {
+      .modal-body .section-signup__page-left {
         min-height: 300px; } }
     @media only screen and (max-width: 991px) {
-      .modal-body .section-signup__page1-left {
+      .modal-body .section-signup__page-left {
         background-image: none;
         background-color: #545871; } }
-  .modal-body .section-signup__page1-left-brand {
+  .modal-body .section-signup__page-left-brand {
     padding-top: 80px;
     padding-left: 150px;
     /*media queries*/ }
-    .modal-body .section-signup__page1-left-brand a {
+    .modal-body .section-signup__page-left-brand a {
       text-decoration: none;
       color: #fff; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .modal-body .section-signup__page1-left-brand {
+      .modal-body .section-signup__page-left-brand {
         padding-top: 50px;
         padding-left: 80px; } }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .modal-body .section-signup__page1-left-brand {
+      .modal-body .section-signup__page-left-brand {
         padding-top: 20px;
         padding-left: 20px; } }
     @media only screen and (min-width: 576px) and (max-width: 767px) {
-      .modal-body .section-signup__page1-left-brand {
+      .modal-body .section-signup__page-left-brand {
         padding-top: 10px;
         padding-left: 10px; }
-        .modal-body .section-signup__page1-left-brand a {
+        .modal-body .section-signup__page-left-brand a {
           font-size: 16px; } }
-  .modal-body .section-signup__page1-left-breadcrumbs {
+  .modal-body .section-signup__page-left-breadcrumbs {
     padding-top: 140px;
     padding-left: 20px;
     /*media queries*/ }
-    .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs {
+    .modal-body .section-signup__page-left-breadcrumbs ul.breadcrumbs {
       list-style-type: none;
       padding-left: 0; }
-      .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li {
+      .modal-body .section-signup__page-left-breadcrumbs ul.breadcrumbs li {
         padding-top: 5px;
         padding-bottom: 30px; }
-        .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li a {
+        .modal-body .section-signup__page-left-breadcrumbs ul.breadcrumbs li a {
           text-decoration: none;
           color: rgba(255, 255, 255, 0.7); }
-      .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li.active a {
+      .modal-body .section-signup__page-left-breadcrumbs ul.breadcrumbs li.active a {
         text-decoration: none;
         color: #fff; }
     @media only screen and (min-width: 1450px) {
-      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+      .modal-body .section-signup__page-left-breadcrumbs ul li a {
         font-size: 24px; } }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+      .modal-body .section-signup__page-left-breadcrumbs ul li a {
         font-size: 18px; } }
     @media only screen and (max-width: 767px) {
-      .modal-body .section-signup__page1-left-breadcrumbs {
+      .modal-body .section-signup__page-left-breadcrumbs {
         padding-left: 5px; }
-        .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+        .modal-body .section-signup__page-left-breadcrumbs ul li a {
           font-size: 14px; }
-        .modal-body .section-signup__page1-left-breadcrumbs ul.breadcrumbs li {
+        .modal-body .section-signup__page-left-breadcrumbs ul.breadcrumbs li {
           padding-bottom: 0; }
-        .modal-body .section-signup__page1-left-breadcrumbs svg {
+        .modal-body .section-signup__page-left-breadcrumbs svg {
           width: 97%;
           height: 97%;
           padding-top: 15px; } }
     @media only screen and (max-width: 575px) {
-      .modal-body .section-signup__page1-left-breadcrumbs {
+      .modal-body .section-signup__page-left-breadcrumbs {
         padding-top: 20px;
         padding-left: 50px; }
-        .modal-body .section-signup__page1-left-breadcrumbs ul li {
+        .modal-body .section-signup__page-left-breadcrumbs ul li {
           display: inline-block;
           margin-right: 10px; }
-          .modal-body .section-signup__page1-left-breadcrumbs ul li a {
+          .modal-body .section-signup__page-left-breadcrumbs ul li a {
             font-size: 18px; }
-        .modal-body .section-signup__page1-left-breadcrumbs svg {
+        .modal-body .section-signup__page-left-breadcrumbs svg {
           display: none; } }
   .modal-body .petForm__body {
     background-color: #faeceb;
@@ -473,5 +523,79 @@ button:focus {
         padding: 20px 5px; }
         .modal-body .petForm__footer button {
           padding: 15px 30px; } }
+
+/*Page: Sign Up - 3*/
+.signUp3 .section-signup__page-left {
+  background-image: url("../img/cat_01.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 991px) {
+    .signUp3 .section-signup__page-left {
+      background-image: none;
+      background-color: #545871; } }
+.signUp3 .petForm__body {
+  padding-bottom: 170px; }
+
+/* media query*/
+@media only screen and (min-width: 1450px) {
+  #expiry-yy {
+    padding-top: 42px; } }
+@media only screen and (min-width: 1400px) {
+  #expiry-yy {
+    padding-top: 42px; } }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  #expiry-yy {
+    padding-top: 42px; } }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #expiry-yy {
+    padding-top: 42px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #expiry-yy {
+    padding-top: 42px; } }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  #expiry-yy {
+    padding-top: 50px; }
+
+  #card-cvc {
+    padding-top: 10px; } }
+@media only screen and (max-width: 575px) {
+  #expiry-yy {
+    padding-top: 30px; } }
+/* Page: Sign Up - 4*/
+.signUp4 .section-signup__page-left {
+  background-image: url("../img/puppy_01.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 991px) {
+    .signUp4 .section-signup__page-left {
+      background-image: none;
+      background-color: #545871; } }
+.signUp4 .petForm__body {
+  padding-bottom: 170px; }
+  .signUp4 .petForm__body h2 {
+    padding-bottom: 72px; }
+.signUp4 .pet .pet-data {
+  text-align: center;
+  padding-bottom: 10px; }
+.signUp4 .pet .pet-param {
+  font-size: 12px;
+  text-align: center; }
+.signUp4 .pet__avatar {
+  text-align: center;
+  margin-bottom: 0; }
+  .signUp4 .pet__avatar img {
+    margin-top: -60px; }
+.signUp4 .pet__favourites {
+  text-align: center; }
+  .signUp4 .pet__favourites ul li {
+    display: inline-block; }
+.signUp4 .pet__addMore {
+  padding: 50px 0 0 150px; }
+  .signUp4 .pet__addMore a {
+    font-size: 20px;
+    color: #545871; }
+  @media only screen and (max-width: 991px) {
+    .signUp4 .pet__addMore {
+      padding: 50px 5px 0px 20px; } }
 
 /*# sourceMappingURL=bootstrap_skin.css.map */
