@@ -14,3 +14,7 @@
 # 28/07 Sat. 
 # ngApp: by now complete Signup-1 and Signup-3 features,
 # main struggle is around  ajax comms html <-> server(php -[mySql] ), should be in time for monday noon.
+
+# Sat 28/07/2018 20:40LT , i guess i just complete the general thing: page+responsiveness + signup-app, still a LOT of testing to run 
+# through , also code readability optimizing, need to reed through these BEM methodology, then need to upload the whole thing onto the
+# server and run same tests from there. host/server is php+mysql same as mine here on pc. Will see. 
