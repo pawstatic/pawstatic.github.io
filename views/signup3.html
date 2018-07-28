@@ -48,7 +48,7 @@
               </div>                          
             </div>
             <div class="section-signup__page-form col-md-7 col-sm-8 col-12 pl-0 pr-0">
-              <form class="petForm form">
+              <form class="petForm form" ng-submit="nextTo4()" name="paymentDetails" novalidate>
                 <div class="petForm__body">
                   <div class="row">
                     <div class="col-12">
@@ -58,45 +58,64 @@
                   <div class="row">
                     <div class="col-12">
                       <div class="form-group">
-                        <label for="cardHolder">Credit card holder name</label>
-                        <input type="text" name="cardHolder" id="cardHolder" 
-                        placeholder="Name on credit card" class="form-control">
+                        <label for="holder_name">Credit card holder name</label>
+                        <input type="text" name="holder_name" id="cardHolder" 
+                        placeholder="Name on credit card" class="form-control"
+                        ng-model="ccard.holder_name" required>
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-group">
                         <div class="form-group">
-                          <label for="cardNumber">Credit card number</label>
-                          <input type="number" name="cardNumber" id="cardNumber" 
-                          placeholder="0000-0000-0000-0000" class="form-control">
+                          <label for="num">Credit card number</label>
+                          <input type="number" name="num" id="cardNumber" 
+                          placeholder="0000-0000-0000-0000" class="form-control"
+                          ng-model="ccard.num" required>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-4" id="expiry-mm">
-                      <label for="month">Expiration date</label>
-                      <select class="custom-select" id="month">
-                        <option>Jan</option>
+                      <label for="expiry_mm">Expiration date</label>
+                      <select class="custom-select" id="month"
+                       ng-model="ccard.expiry_mm" name="expiry_mm" required>
+                        <option value="01">Jan</option>
+                        <option value="02">Feb</option>
+                        <option value="03">Mar</option>
+                        <option value="04">Apr</option>
+                        <option value="05">May</option>
+                        <option value="06">Jun</option>
+                        <option value="07">Jul</option>
+                        <option value="08">Aug</option>
+                        <option value="09">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
                       </select>
                     </div>
                     <div class="col-sm-4" id="expiry-yy">
-                      <select class="custom-select" id="year">
-                        <option>2018</option>
+                      <select class="custom-select" id="year" 
+                      ng-model="ccard.expiry_yy" name="expiry_yy" required>
+                        <option value="18">2018</option>
+                        <option value="19">2019</option>
+                        <option value="20">2020</option>
+                        <option value="21">2021</option>
                       </select>
                     </div>
                     <div class="col-sm-4" id="card-cvc">
                       <label for="cvc">CVC</label>
-                      <input type="number" name="cvc" id="cvc" placeholder="CVC" class="form-control">
+                      <input type="number" name="cvc" id="cvc" placeholder="CVC" class="form-control" ng-model="ccard.cvc" required>
                     </div>                  
                   </div> 
                   <div class="row pt-4">
                     <div class="col-12">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="saveCardNum" >
+                        <input type="checkbox" class="custom-control-input" id="saveCardNum" ng-model="ccard.save_authorised" name="saveCardNum">
                         <label class="custom-control-label" for="saveCardNum">
                           Save this card for future use
                         </label>
+                        
                       </div>
                     </div>
                   </div>                  
@@ -108,7 +127,8 @@
                           EXIT
                     </button>
                     <button class="btn btn-primary btn-lg pull-right"
-                            ng-click="nextTo('signup4')">
+                            type="submit" name="submit" 
+                            ng-disabled="paymentDetails.$invalid">
                       NEXT
                     </button>
                   </div>
@@ -116,5 +136,5 @@
               </form>
             </div>
           </div>
-        </div>       
+        </div>      
       <!--end content --> 

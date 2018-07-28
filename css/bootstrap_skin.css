@@ -30,6 +30,9 @@ button:focus {
 .btn-primary {
   background-color: #545871;
   border-color: #333645; }
+  .btn-primary.disabled, .btn-primary:disabled {
+    background-color: #545871;
+    border-color: #333645; }
 
 .btn-primary:hover {
   background-color: #333645;
@@ -47,6 +50,11 @@ button:focus {
 .btn-primary:focus, .btn-primary.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(84, 88, 113, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(84, 88, 113, 0.5); }
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #777c9a !important;
+  border-color: #1e1f28 !important; }
 
 /*outline button*/
 .btn-outline-primary {

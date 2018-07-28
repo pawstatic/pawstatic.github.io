@@ -33,6 +33,12 @@ button:focus {
 .btn-primary{
   background-color: $d-g-amarant;
   border-color: darken($d-g-amarant, 15%);
+  &.disabled,
+  &:disabled {
+    
+    background-color: $d-g-amarant;
+    border-color: darken($d-g-amarant, 15%);
+  }
 }
 .btn-primary:hover {
     background-color: darken($d-g-amarant, 15%);
@@ -50,6 +56,11 @@ button:focus {
 .btn-primary:focus, .btn-primary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
             box-shadow: 0 0 0 0.2rem rgba($d-g-amarant, 0.5);
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: lighten($d-g-amarant, 15%) !important ;
+    border-color: darken($d-g-amarant, 25%) !important ;
 }
 
   /*outline button*/

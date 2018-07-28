@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="signApp">
 <head>
     <title>Pawstatic</title>
     <!-- Required meta tags -->
@@ -11,7 +11,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
     <!-- angularjs 1.3.7 and angular-route -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular-route.min.js"></script>
@@ -27,11 +27,19 @@
     <!-- Main css:  -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="js/sign-up.js"></script>
+    <style type="text/css">
+      .btn-primary.disabled, .btn-primary:disabled {
+        /*embed css - Exception! style disabled button in form*/
+          color: #fff;
+          background-color: #9497a7 !important ;
+          border-color: #545871 !important ;
+      }
+    </style>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-controller="mainCtrl">
 <!-- ======================== HEADER START ================================================== -->
 <!-- for style, see main.scss HEADER -->
 <header>
@@ -255,85 +263,54 @@
             </div>
           </div>
         </div>
+        
         <div class="row pr-0 pl-0">
-          <div class="section3__pets-profile col-lg-6">
+          <div class="section3__pets-profile col-lg-6"
+              ng-repeat="item in profile">
             <div class="card">
               <div class="card-body">
                 <h4 class="pet-avatar card-title">
-                  <!-- here span tags for later stage if ng-app will need-->
-                  <img src="img/ginger.png" alt="dog profile image" class="float-left pr-4"> <span>10.12.2017</span>
-                  <br>Ginger Fisher
+                <img ng-src="{{item.image}}" alt="dog profile image" class="float-left pr-4"> <span>10.12.2017</span>
+                  <br>{{item.name}}
                 </h4>
                 <table class="table table-bordered rounded d-none d-sm-table">
                   <tbody>
                     <tr>
                       <td>
-                        <div class="pet-data"><img src="img/female-ico.png" alt="female icon"></div>
-                        <div class="pet-param">FEMALE</div>
+                        <span ng-switch="item.gender">
+                          <span ng-switch-when="MALE">
+                            <img src="img/male-ico.PNG" alt="male icon">
+                          </span>
+                          <span ng-switch-when="FEMALE">
+                            <img src="img/female-ico.png" alt="female icon">
+                          </span>
+                        </span> 
                       </td>
                       <td>
-                        <div class="pet-data">8</div>
+                        <div class="pet-data">{{ageCalc(item.dob)}} </div>
                         <div class="pet-param">YEARS OLD</div>
                       </td>
                       <td>
                         <div class="pet-data"><img src="img/checked-ico.png" alt="check icon"></div>
-                        <div class="pet-param">SPAYED</div>
+                        <div class="pet-param">{{item.status}}</div>
                       </td>
                       <td>
-                        <div class="pet-data">50-100</div>
+                        <div class="pet-data">{{item.weight}}</div>
                         <div class="pet-param">POUNDS</div>
                       </td>
                     </tr>
                   </tbody>              
                 </table>
                 <ul class="list-unstyled d-sm-none">
-                  <li><span></span><span> FEMALE</span></li>
-                  <li><span>8</span><span> YEARS OLD</span></li>
-                  <li><span></span><span> SPAYED</span></li>
-                  <li><span>50-100</span><span> POUNDS</span></li>
+                  <li><span> {{item.gender}}</span></li>
+                  <li><span>{{ageCalc(item.dob)}} </span><span> YEARS OLD</span></li>
+                  <li><span></span><span>{{item.status}} </span></li>
+                  <li><span>{{item.weight}} </span><span> POUNDS</span></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="section3__pets-profile col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="pet-avatar card-title">
-                  <!-- here span tags for later stage if ng-app will need-->
-                  <img src="img/ginger.png" alt="dog profile image" class="float-left pr-4"> <span>10.12.2017</span>
-                  <br>Ginger Fisher
-                </h4>
-                <table class="table table-bordered rounded d-none d-sm-table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="pet-data"><img src="img/female-ico.png" alt="female icon"></div>
-                        <div class="pet-param">FEMALE</div>
-                      </td>
-                      <td>
-                        <div class="pet-data">8</div>
-                        <div class="pet-param">YEARS OLD</div>
-                      </td>
-                      <td>
-                        <div class="pet-data"><img src="img/checked-ico.png" alt="check icon"></div>
-                        <div class="pet-param">SPAYED</div>
-                      </td>
-                      <td>
-                        <div class="pet-data">50-100</div>
-                        <div class="pet-param">POUNDS</div>
-                      </td>
-                    </tr>
-                  </tbody>              
-                </table>
-                <ul class="list-unstyled d-sm-none">
-                  <li><span></span><span> FEMALE</span></li>
-                  <li><span>8</span><span> YEARS OLD</span></li>
-                  <li><span></span><span> SPAYED</span></li>
-                  <li><span>50-100</span><span> POUNDS</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
         </div>       
       </div>      
       <div class="row">
@@ -443,8 +420,8 @@
 <!-- ==================================== MODAL: ============================ -->
 <div class="modal fade" id="signUp" tabindex="-1" role="dialog"  aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content" ng-app="signApp">      
-      <div class="modal-body" ng-controller="mainCtrl">
+    <div class="modal-content">      
+      <div class="modal-body">
         <ng-view/>
       </div>      
     </div>

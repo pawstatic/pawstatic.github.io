@@ -49,7 +49,8 @@
             </div>
             <div class="section-signup__page-form col-md-7 col-sm-8 col-12 pl-0 pr-0"
                   >
-              <form class="petForm form">
+              <form class="petForm form" name="petData" 
+                  method="POST" ng-submit="nextTo()" >
                 <div class="petForm__body">
                   <div class="row">
                     <div class="col-12">
@@ -59,31 +60,35 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" placeholder="Pet's name"
-                               class="form-control">
+                        <label for="petname">Name</label>
+                        <input type="text" name="petname" placeholder="Pet's name" class="form-control" ng-model="data.petname">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
+                        <input type="text" name="imageUrl" ng-model="data.imageUrl" style="display: none;"> 
                         <label class="upload">
+                          <img ng-if="currentFile" ng-src="{{image_source}}" style="width:65px; height: 65px;">
                           <img src="img/upload.png" class="img-fluid">
-                          <input type="file" style="display: none;">
-                          Upload a photo
+                          <input ng-model="form.image" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="display: none;">
+                           <a href="" 
+                           ng-click="submit()" 
+                           style="color: #545871"> 
+                            Upload a photo</a>
                         </label>
+
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-6">
                       <label for="breed">Breed</label>
-                      <input type="text" name="breed" class="form-control" 
-                            placeholder="Pet's breed">
+                      <input type="text" name="breed" class="form-control" placeholder="Pet's breed" ng-model="data.breed">
                     </div>
                     <div class="col-sm-6">
                       <label for="dob">Birthday</label>
                       <input type="date" name="dob" class="form-control" 
-                            placeholder="DD/MM/YYY">
+                            placeholder="DD/MM/YYY" ng-model="data.dob">
                     </div>
                   </div>
                   <div class="row pt-4">
@@ -95,14 +100,14 @@
                             <td>
                               <div class="custom-control custom-radio col-6 ">
                                 <input type="radio" id="female" name="gender" 
-                                        class="custom-control-input" checked="" value="female">
+                                        class="custom-control-input" checked="" value="FEMALE" ng-model="data.gender">
                                 <label class="custom-control-label" for="female">Female</label>
                               </div>
                             </td>
                             <td>
                               <div class="custom-control custom-radio col-6">
                                 <input type="radio" id="male" name="gender" 
-                                        class="custom-control-input" value="male">
+                                        class="custom-control-input" value="MALE" ng-model="data.gender">
                                 <label class="custom-control-label" for="male">
                                   Male
                                 </label>
@@ -121,7 +126,7 @@
                               <div class="custom-control custom-radio col-6 ">
                                 <input type="radio" id="spayed" name="status" 
                                       class="custom-control-input" checked="" 
-                                      value="spayed">
+                                      value="SPAYED" ng-model="data.status">
                                 <label class="custom-control-label" for="spayed">
                                   Spayed
                                 </label>
@@ -131,7 +136,7 @@
                               <div class="custom-control custom-radio col-6">
                                 <input type="radio" id="neutered" 
                                       name="status" class="custom-control-input" 
-                                      value="neutered">
+                                      value="NEUTERED" ng-model="data.status">
                                 <label class="custom-control-label" for="neutered">
                                   Neutered
                                 </label>
@@ -145,7 +150,7 @@
                   <div class="row pt-4">
                     <div class="col-12">
                       <label for="weight"> Weight</label>
-                      <select class="custom-select">
+                      <select class="custom-select" ng-model="data.weight">
                         <option selected="" value="50-100">50-100 lbs</option>
                         <option value="100-120">100-120 lbs</option>
                         <option value="120-150">120-150 lbs</option>
@@ -160,8 +165,8 @@
                             class="close" data-dismiss="modal" aria-label="Close">
                           EXIT
                     </button>
-                    <button class="btn btn-primary btn-lg pull-right"
-                           ng-click="nextTo('signup3')" >
+                    <button class="btn btn-primary btn-lg pull-right" type="submit" 
+                          >
                       NEXT
                     </button>
                   </div>
@@ -169,5 +174,5 @@
               </form>
             </div>
           </div>
-        </div>       
+        </div>        
       <!--end content --> 

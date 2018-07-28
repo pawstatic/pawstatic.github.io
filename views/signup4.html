@@ -52,7 +52,16 @@
                 <div class="petForm__body">
                   <div class="row">
                     <div class="col-12">
-                      <h2>Okay, Ginger  &rsquo;s all set! We can  &rsquo;t wait to meet her.</h2>
+                      <h2>
+                        Okay, {{data.petname}}&rsquo;s all set! We can  &rsquo;t wait to meet <span ng-switch="data.gender">
+                                        <span ng-switch-when="MALE">
+                                          him
+                                        </span>
+                                        <span ng-switch-when="FEMALE">
+                                          her
+                                        </span>
+                                      </span>.
+                      </h2>
                     </div>
                   </div>
                   <div class="row">
@@ -60,10 +69,10 @@
                       <div class="pet card">
                         <div class="card-body">
                           <h4 class="pet__avatar card-title text-center">
-                            <img src="img/ginger.png" alt="dog profile image" class=""> 
+                            <img ng-src="{{data.imageUrl}}" alt="dog profile image" class=""> 
                             <h3 class="text-center">
-                              Ginger
-                             <br><small class="text-center">Golden retriever</small>
+                              {{data.petname}}
+                             <br><small class="text-center">{{data.breed}} </small>
                             </h3>                                                        
                           </h4>
                           <hr>
@@ -79,19 +88,28 @@
                           </div>
                           <div class="row no-gutters ">
                             <div class="col-md-3">
-                              <div class="pet-data"><img src="img/female-ico.png" alt="female icon"></div>
-                              <div class="pet-param">FEMALE</div>
+                              <div class="pet-data">
+                                <span ng-switch="data.gender">
+                                  <span ng-switch-when="MALE">
+                                    <img src="img/male-ico.PNG" alt="male icon">
+                                  </span>
+                                  <span ng-switch-when="FEMALE">
+                                    <img src="img/female-ico.png" alt="female icon">
+                                  </span>
+                                </span> 
+                              </div>
+                              <div class="pet-param">{{data.gender}} </div>
                             </div>
                             <div class="col-md-3">
-                              <div class="pet-data">8</div>
+                              <div class="pet-data">{{ageCalc(data.dob)}}</div>
                               <div class="pet-param">YEARS OLD</div>
                             </div>
                             <div class="col-md-3">
                               <div class="pet-data"><img src="img/checked-ico.png" alt="check icon"></div>
-                              <div class="pet-param">SPAYED</div>
+                              <div class="pet-param">{{data.status}}</div>
                             </div>
                             <div class="col-md-3">
-                              <div class="pet-data">50-100</div>
+                              <div class="pet-data">{{data.weight}}</div>
                               <div class="pet-param">POUNDS</div>
                             </div>
                           </div>                           
@@ -101,7 +119,7 @@
                   </div>
                   <div class="row">
                     <div class="col-12 pet__addMore">
-                      <a href="#" ng-click="nextTo('signup1')">
+                      <a href="#" ng-click="addMore()">
                         Got more pets? Lucky you! Add another pet profile
                       </a>
                     </div>
@@ -113,7 +131,11 @@
                             class="close" data-dismiss="modal" aria-label="Close">
                           EXIT
                     </button>
-                    <button class="btn btn-primary btn-lg pull-right">NEXT</button>
+                    <button class="btn btn-primary btn-lg pull-right"
+                      class="close" data-dismiss="modal" aria-label="Close" 
+                      ng-click="publishProfile()">
+                      NEXT
+                    </button>
                   </div>
                 </div>
               </form>
