@@ -20,7 +20,7 @@
                     $image_path= 'images/'.$image;
               //var $image_path must return to client to keep the URL path
         echo $image_path;
-      }else if(count($data) > 0 )  {  
+    }else if(count($data) > 0 )  {  
            
       $petname = mysqli_real_escape_string($connect, $data->petname);
       $imageUrl = mysqli_real_escape_string($connect, $data->imageUrl);
@@ -30,15 +30,16 @@
       $status = mysqli_real_escape_string($connect, $data->status);       
       $weight = mysqli_real_escape_string($connect, $data->weight);  
       $query = "INSERT INTO clients (name, image, breed, dob, gender, status, weight) VALUES ('$petname', '$imageUrl', '$breed', '$dob', '$gender', '$status', '$weight')";  
-      if(mysqli_query($connect, $query))  
-      {  
-           echo "Data Inserted...";  
-      }  
-      else  
-      {  
-           echo 'Error';  
-      }  
- }  
+        if(mysqli_query($connect, $query))  
+        {  
+             echo "Data Inserted...";  
+        }  
+        else  
+        {  
+             echo 'Error';  
+        }  
+    }
+  mysqli_close($connect);  
 
 
 ?>

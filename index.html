@@ -28,8 +28,8 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="js/sign-up.js"></script>
     <style type="text/css">
+    /*embed css - Exception! style disabled button in form*/
       .btn-primary.disabled, .btn-primary:disabled {
-        /*embed css - Exception! style disabled button in form*/
           color: #fff;
           background-color: #9497a7 !important ;
           border-color: #545871 !important ;
@@ -39,8 +39,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
 </head>
-<body ng-controller="mainCtrl">
-<!-- ======================== HEADER START ================================================== -->
+<body data-ng-controller="mainCtrl" data-ng-init="publishProfile()">
+<!-- ======================== HEADER START================================ -->
 <!-- for style, see main.scss HEADER -->
 <header>
   <div class="top-header container-fluid">
@@ -57,13 +57,13 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             <ul class="navbar-nav">
               <li class="nav-item"><!-- <li class="nav-item active"> -->
-                <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+                <a class="nav-link" ng-click="scroll('about')">About Us <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Reviews</a>
+                <a class="nav-link" ng-click="scroll('reviews')">Reviews</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" ng-click="scroll('services')">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#signUp">Sign Up</a>
@@ -79,7 +79,7 @@
         </div>
         <div class="col-xl-6">
           <h1 class="top-header__greating">
-            We care for<br> your furry little<br> loved ones<br> while<br> you're away
+            We care for<br> your furry little<br> loved ones<br> while<br> you&apos;re away
           </h1>
           <div class="top-header__signUp">
             <button class="btn btn-outline-primary" 
@@ -100,7 +100,7 @@
 <main>
 <!-- SECTION 1 -->
 <!-- for style, see main.scss SECTION 1 -->
-  <section class="section1 container-fluid">
+  <section class="section1 container-fluid" id="about">
     <div class="wrapper">
       <div class="row">
         <div class="section1__article col-lg-6">
@@ -115,7 +115,7 @@
             <div class="col"><img src="img/marlon-xs.png" class="img-fluid"></div>
           </div>
           <p>
-            We know how stressful it is to leave your pets at home alone. We’re a team of experienced animal caregivers, well connected to local veterinarians. Trust to us to love them like our own, and to keep them safe and happy till you’re home.
+            We know how stressful it is to leave your pets at home alone. We&apos;re a team of experienced animal caregivers, well connected to local veterinarians. Trust to us to love them like our own, and to keep them safe and happy till you&apos;re home.
           </p> 
           <button class="btn btn-primary" data-toggle="modal" data-target="#signUp">
             Sign Up
@@ -175,7 +175,7 @@
   </section>
 <!-- SECTION 3 -->
 <!-- for style, see main.scss SECTION 3 -->
-  <section class="section3 container-fluid">
+  <section class="section3 container-fluid" id="reviews">
     <div class="container pr-0 pl-0">
       <div class="row">
         <div class="section3__heading col-lg-12">
@@ -183,87 +183,7 @@
         </div>
       </div>
       <div class="section3__pets">
-        <div class="row pr-0 pl-0">
-          <div class="section3__pets-profile col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="pet-avatar card-title">
-                  <!-- here span tags for later stage if ng-app will need-->
-                  <img src="img/ginger.png" alt="dog profile image" class="float-left pr-4"> <span>10.12.2017</span>
-                  <br>Ginger Fisher
-                </h4>
-                <table class="table table-bordered rounded d-none d-sm-table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="pet-data"><img src="img/female-ico.png" alt="female icon"></div>
-                        <div class="pet-param">FEMALE</div>
-                      </td>
-                      <td>
-                        <div class="pet-data">8</div>
-                        <div class="pet-param">YEARS OLD</div>
-                      </td>
-                      <td>
-                        <div class="pet-data"><img src="img/checked-ico.png" alt="check icon"></div>
-                        <div class="pet-param">SPAYED</div>
-                      </td>
-                      <td>
-                        <div class="pet-data">50-100</div>
-                        <div class="pet-param">POUNDS</div>
-                      </td>
-                    </tr>
-                  </tbody>              
-                </table>
-                <ul class="list-unstyled d-sm-none">
-                  <li><span></span><span> FEMALE</span></li>
-                  <li><span>8</span><span> YEARS OLD</span></li>
-                  <li><span></span><span> SPAYED</span></li>
-                  <li><span>50-100</span><span> POUNDS</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="section3__pets-profile col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="pet-avatar card-title">
-                  <!-- here span tags for later stage if ng-app will need-->
-                  <img src="img/ginger.png" alt="dog profile image" class="float-left pr-4"> <span>10.12.2017</span>
-                  <br>Ginger Fisher
-                </h4>
-                <table class="table table-bordered rounded d-none d-sm-table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="pet-data"><img src="img/female-ico.png" alt="female icon"></div>
-                        <div class="pet-param">FEMALE</div>
-                      </td>
-                      <td>
-                        <div class="pet-data">8</div>
-                        <div class="pet-param">YEARS OLD</div>
-                      </td>
-                      <td>
-                        <div class="pet-data"><img src="img/checked-ico.png" alt="check icon"></div>
-                        <div class="pet-param">SPAYED</div>
-                      </td>
-                      <td>
-                        <div class="pet-data">50-100</div>
-                        <div class="pet-param">POUNDS</div>
-                      </td>
-                    </tr>
-                  </tbody>              
-                </table>
-                <ul class="list-unstyled d-sm-none">
-                  <li><span></span><span> FEMALE</span></li>
-                  <li><span>8</span><span> YEARS OLD</span></li>
-                  <li><span></span><span> SPAYED</span></li>
-                  <li><span>50-100</span><span> POUNDS</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
+       
         <div class="row pr-0 pl-0">
           <div class="section3__pets-profile col-lg-6"
               ng-repeat="item in profile">
@@ -276,6 +196,21 @@
                 <table class="table table-bordered rounded d-none d-sm-table">
                   <tbody>
                     <tr>
+                      <td>
+                        <div class="pet-data">
+                          <span ng-switch="item.gender">
+                          <span ng-switch-when="MALE">
+                            <img src="img/male-ico.PNG" alt="male icon">
+                          </span>
+                          <span ng-switch-when="FEMALE">
+                            <img src="img/female-ico.png" alt="female icon">
+                          </span>
+                        </span> 
+                        </div>
+                        <div class="pet-param">
+                          {{item.gender}}
+                        </div>
+                      </td>
                       <td>
                         <span ng-switch="item.gender">
                           <span ng-switch-when="MALE">
@@ -324,7 +259,7 @@
   </section>
 <!-- SECTION 4 -->
 <!-- for style, see main.scss SECTION 4 -->
-  <section class="section4 container-fluid">
+  <section class="section4 container-fluid" id="services">
     <div class="container">
       <div class="row">
         <div class="section4__heading col-lg-12">
@@ -344,7 +279,7 @@
               <img src="img/Flower icon.png" alt="flower-cercle icon">
               <h3>Dog walk</h3>
               <p>
-                We’ll take your pup<br> for a 30 minute walk<br> and make sure he or<br> she has fresh food<br> and water.
+                We&apos;ll take your pup<br> for a 30 minute walk<br> and make sure he or<br> she has fresh food<br> and water.
               </p>
             </div>            
             <div class="cost">
@@ -361,7 +296,7 @@
               <img src="img/wave-ico.png" alt="hand wave cercle icon">
               <h3>Drop-in visit</h3>
               <p>
-                We’ll stop by to<br> snuggle, feed, and<br> play with your pets in<br> the comfort of their<br> own home.
+                We&apos;ll stop by to<br> snuggle, feed, and<br> play with your pets in<br> the comfort of their<br> own home.
               </p>
             </div>            
             <div class="cost">
@@ -378,7 +313,7 @@
               <img src="img/home-ico.png" alt="home-cercle icon">
               <h3>House Sitting</h3>
               <p>
-                We’ll stay overnight<br> with your pets to make<br> sure they have<br> round-the-clock love.<br><br>
+                We&apos;ll stay overnight<br> with your pets to make<br> sure they have<br> round-the-clock love.<br><br>
               </p>
             </div>            
             <div class="cost">
