@@ -50,7 +50,7 @@
             <div class="section-signup__page-form col-md-7 col-sm-8 col-12 pl-0 pr-0"
                   >
               <form class="petForm form" name="petData" 
-                  method="POST" ng-submit="nextTo()" >
+                  method="POST" ng-submit="nextTo()" novalidate>
                 <div class="petForm__body">
                   <div class="row">
                     <div class="col-12">
@@ -61,7 +61,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label for="petname">Name</label>
-                        <input type="text" name="petname" placeholder="Pet's name" class="form-control" ng-model="data.petname">
+                        <input type="text" name="petname" placeholder="Pet's name" class="form-control" ng-model="data.petname" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -83,12 +83,12 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <label for="breed">Breed</label>
-                      <input type="text" name="breed" class="form-control" placeholder="Pet's breed" ng-model="data.breed">
+                      <input type="text" name="breed" class="form-control" placeholder="Pet's breed" ng-model="data.breed" required>
                     </div>
                     <div class="col-sm-6">
                       <label for="dob">Birthday</label>
                       <input type="date" name="dob" class="form-control" 
-                            placeholder="DD/MM/YYY" ng-model="data.dob">
+                            placeholder="DD/MM/YYY" ng-model="data.dob" required>
                     </div>
                   </div>
                   <div class="row pt-4">
@@ -100,14 +100,14 @@
                             <td>
                               <div class="custom-control custom-radio col-6 ">
                                 <input type="radio" id="female" name="gender" 
-                                        class="custom-control-input" checked="" value="FEMALE" ng-model="data.gender">
+                                        class="custom-control-input" checked="" value="FEMALE" ng-model="data.gender" required>
                                 <label class="custom-control-label" for="female">Female</label>
                               </div>
                             </td>
                             <td>
                               <div class="custom-control custom-radio col-6">
                                 <input type="radio" id="male" name="gender" 
-                                        class="custom-control-input" value="MALE" ng-model="data.gender">
+                                        class="custom-control-input" value="MALE" ng-model="data.gender" required>
                                 <label class="custom-control-label" for="male">
                                   Male
                                 </label>
@@ -126,7 +126,7 @@
                               <div class="custom-control custom-radio col-6 ">
                                 <input type="radio" id="spayed" name="status" 
                                       class="custom-control-input" checked="" 
-                                      value="SPAYED" ng-model="data.status">
+                                      value="SPAYED" ng-model="data.status" required>
                                 <label class="custom-control-label" for="spayed">
                                   Spayed
                                 </label>
@@ -136,7 +136,7 @@
                               <div class="custom-control custom-radio col-6">
                                 <input type="radio" id="neutered" 
                                       name="status" class="custom-control-input" 
-                                      value="NEUTERED" ng-model="data.status">
+                                      value="NEUTERED" ng-model="data.status" required>
                                 <label class="custom-control-label" for="neutered">
                                   Neutered
                                 </label>
@@ -150,7 +150,7 @@
                   <div class="row pt-4">
                     <div class="col-12">
                       <label for="weight"> Weight</label>
-                      <select class="custom-select" ng-model="data.weight">
+                      <select class="custom-select" ng-model="data.weight" required>
                         <option selected="" value="50-100">50-100 lbs</option>
                         <option value="100-120">100-120 lbs</option>
                         <option value="120-150">120-150 lbs</option>
@@ -161,12 +161,14 @@
                 </div>
                 <div class="row pl-3 pr-3">
                   <div class="col-12 petForm__footer">
-                    <button class="btn btn-outline-primary  btn-lg" 
+                    <button class="btn btn-outline-primary btn-lg"
+                            ng-click="resetProfile()" 
                             class="close" data-dismiss="modal" aria-label="Close">
                           EXIT
                     </button>
-                    <button class="btn btn-primary btn-lg pull-right" type="submit" 
-                          >
+                    <button class="btn btn-primary btn-lg pull-right" 
+                            type="submit" ng-disabled="petData.$invalid || petData.$pending"
+                            >
                       NEXT
                     </button>
                   </div>

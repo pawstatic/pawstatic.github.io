@@ -20,7 +20,7 @@ angular.module("signApp", ["ngRoute"])
 // INITIAL LANDING PAGE NAV: 
 	$scope.scroll = function(id) {
 		if ($location.hash() !== id) {
-      // set the $location.hash to `newHash` and
+      // set the $location.hash to `id` and
       // $anchorScroll will automatically scroll to it
       $location.hash(id);
     } else {
@@ -29,11 +29,15 @@ angular.module("signApp", ["ngRoute"])
       $anchorScroll();
     }
 	};
+	$scope.newForm = function() {
+		$location.path("/signup1");
+	}
 	
 // FIRST PAGE Signup-1
 		$scope.data = {};
 		$scope.data.imageUrl = "img/paw.png"; //default profile image
 		$scope.nextTo = function () {
+
 			console.log($scope.data);
 			$http({
 				method:'post', 
@@ -98,6 +102,14 @@ angular.module("signApp", ["ngRoute"])
 			    }
 			    return age;
 			  }
+// reset to zero the profile data:
+				$scope.resetProfile = function () {
+					$scope.form = [];
+		  		$scope.currentFile = false;
+					$scope.data = {};
+					$scope.data.imageUrl = "img/paw.png";
+					$scope.ccard={};
+				}
 
 // SECOND PAGE Signup-3:
 		$scope.ccard = {};
@@ -130,6 +142,7 @@ angular.module("signApp", ["ngRoute"])
 				url: 'fetchData.php'
 				}).then(function (response) {
 				$scope.profile = response.data;
+
 				console.log($scope.profile);
 				},
 				function(error){
@@ -149,6 +162,11 @@ angular.module("signApp", ["ngRoute"])
 				function(error){
 				console.log(error, "ajax can't get data" );
 			});
+			$scope.form = [];
+		  $scope.currentFile = false;
+			$scope.data = {};
+			$scope.data.imageUrl = "img/paw.png"; //default profile image
+			$scope.ccard={};
 		}
 
 		

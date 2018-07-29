@@ -39,8 +39,8 @@
                     </div>
                     <div class="col-md-8 col-sm-10 col-11">
                       <ul class="breadcrumbs">
-                        <li class="pl-1"><a ng-click="nextTo('signup1')">Pet basics</a></li>
-                        <li class="pl-1"><a ng-click="nextTo('signup3')">Payment details</a></li>
+                        <li class="pl-1"><a>Pet basics</a></li>
+                        <li class="pl-1"><a>Payment details</a></li>
                         <li class="active pl-1"><a>Confirm</a></li>
                       </ul>
                     </div>
@@ -127,7 +127,8 @@
                 </div>
                 <div class="row pl-3 pr-3">
                   <div class="col-12 petForm__footer">
-                    <button class="btn btn-outline-primary  btn-lg" 
+                    <button class="btn btn-outline-primary  btn-lg" type="reset"
+                            ng-click="resetProfile()" 
                             class="close" data-dismiss="modal" aria-label="Close">
                           EXIT
                     </button>

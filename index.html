@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular-route.min.js"></script>
   <!-- Lib JavaScripts end-->
-  <!--Fontawesome -->
+    <!--Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,6 +26,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <!-- Main css:  -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- SignApp:  -->
     <script type="text/javascript" src="js/sign-up.js"></script>
     <style type="text/css">
     /*embed css - Exception! style disabled button in form*/
@@ -45,7 +46,10 @@
 <header>
   <div class="top-header container-fluid">
     <div class="wrapper">      
-      <!-- NAVBAR --> 
+      <!-- 
+      HEADER NAVBAR.  styles: scss/bootstrap-skin.scss , lines: 5 - 26
+                      index.html, lines: 29-34.
+      --> 
       <nav class="navbar navbar-expand-md navbar-light bg-light">
           <a class="top-header__brand navbar-brand" href="#">
             <img src="img/paw.png" class="img-fluid float-left pr-3">
@@ -57,22 +61,27 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             <ul class="navbar-nav">
               <li class="nav-item"><!-- <li class="nav-item active"> -->
-                <a class="nav-link" ng-click="scroll('about')">About Us <span class="sr-only">(current)</span></a>
+                <a class="nav-link" ng-click="scroll('about')" href="">About Us <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" ng-click="scroll('reviews')">Reviews</a>
+                <a class="nav-link" ng-click="scroll('reviews')" href="">Reviews</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" ng-click="scroll('services')">Services</a>
+                <a class="nav-link" ng-click="scroll('services')" href="">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#signUp">Sign Up</a>
+                <a class="nav-link" href="#" data-toggle="modal" 
+                data-target="#signUp" ng-click="newForm()">
+                  Sign Up
+                </a>
               </li>
             </ul>
           </div>
       </nav>  
       <!-- NAVBAR end-->
-      
+      <!-- 
+      HEADER  INTRO. style: scss/main.scss , lines: 38 -163
+      -->
       <div class="row">
         <div class="col-xl-6">
                     
@@ -83,14 +92,14 @@
           </h1>
           <div class="top-header__signUp">
             <button class="btn btn-outline-primary" 
-                  data-toggle="modal" data-target="#signUp">  
+                  data-toggle="modal" data-target="#signUp" ng-click="newForm()">  
               Sign Up
             </button>
           </div>          
         </div>
         
         <p class="top-header__signature d-none d-sm-none d-md-block">Ozzie in Brooklyn</p>
-        <!-- class="d-none d-sm-none d-md-block" Bootstrap4 helper : don't display on xs and sm screens -->
+        
       </div>
     </div>
   </div>
@@ -99,7 +108,9 @@
 <!-- ======================= MAIN START =========================================== -->
 <main>
 <!-- SECTION 1 -->
-<!-- for style, see main.scss SECTION 1 -->
+<!-- 
+  SECTION 1. style: SCSS/main.scss , lines: 165-247 
+-->
   <section class="section1 container-fluid" id="about">
     <div class="wrapper">
       <div class="row">
@@ -107,7 +118,6 @@
           <h2>
             Expert care for your furry, feathery, or scaley friend
           </h2>
-          <!-- class="d-none" Bootstrap4 helper class : hide on screens wider than md -->
           <div class="section1__article-gallery-sm d-lg-none row align-items-center">
             <div class="col"><img src="img/muffin-xs.png" class="img-fluid"></div>
             <div class="col"><img src="img/peep-xs.png" class="img-fluid"></div>
@@ -117,11 +127,11 @@
           <p>
             We know how stressful it is to leave your pets at home alone. We&apos;re a team of experienced animal caregivers, well connected to local veterinarians. Trust to us to love them like our own, and to keep them safe and happy till you&apos;re home.
           </p> 
-          <button class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+          <button class="btn btn-primary" data-toggle="modal" 
+          data-target="#signUp" ng-click="newForm()">
             Sign Up
           </button>
         </div>
-        <!-- class="d-none" Bootstrap4 helper class : don't display on xs-md screens -->
         <div class="section1__gallery col-lg-6 d-none d-sm-none d-md-none d-lg-block">
           <div class="row">
             <div class="col-lg-6 thumb">
@@ -144,12 +154,13 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 <!-- SECTION 2 -->
-<!-- for style, see main.scss SECTION 2 -->
+<!-- 
+  SECTION 2. style: scss/main.scss lines: 250-334 
+-->
   <section class="container-fluid section2">
     <div class="wrapper">
       <div class="row no-gutters">
@@ -165,7 +176,8 @@
             Schedule one-off or recurring home visits. An experienced member of our team will spend time with your pet, feed them, change cat litter trays, take the dog for a walk, and anything else you need.
           </p>
           <div class="section2__signUp">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+            <button class="btn btn-primary" data-toggle="modal" 
+            data-target="#signUp" ng-click="newForm()">
               Sign Up
             </button>
           </div>          
@@ -174,7 +186,9 @@
     </div>
   </section>
 <!-- SECTION 3 -->
-<!-- for style, see main.scss SECTION 3 -->
+<!-- 
+  SECTION 3. style: scss/main.scss lines: 337-378 
+-->
   <section class="section3 container-fluid" id="reviews">
     <div class="container pr-0 pl-0">
       <div class="row">
@@ -190,7 +204,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="pet-avatar card-title">
-                <img ng-src="{{item.image}}" alt="dog profile image" class="float-left pr-4"> <span>10.12.2017</span>
+                <img ng-src="{{item.image}}" alt="dog profile image" class="float-left pr-4"> <span>{{item.date.slice(0,10) | date:'dd-MM-yyyy'}}</span>
                   <br>{{item.name}}
                 </h4>
                 <table class="table table-bordered rounded d-none d-sm-table">
@@ -210,16 +224,6 @@
                         <div class="pet-param">
                           {{item.gender}}
                         </div>
-                      </td>
-                      <td>
-                        <span ng-switch="item.gender">
-                          <span ng-switch-when="MALE">
-                            <img src="img/male-ico.PNG" alt="male icon">
-                          </span>
-                          <span ng-switch-when="FEMALE">
-                            <img src="img/female-ico.png" alt="female icon">
-                          </span>
-                        </span> 
                       </td>
                       <td>
                         <div class="pet-data">{{ageCalc(item.dob)}} </div>
@@ -250,7 +254,8 @@
       </div>      
       <div class="row">
         <div class="section3__signUp col-lg-12 text-center">
-            <button class="btn btn-info" data-toggle="modal" data-target="#signUp">
+            <button class="btn btn-info" data-toggle="modal" 
+            data-target="#signUp" ng-click="newForm()">
               Sign Up
             </button>
         </div>
@@ -258,7 +263,9 @@
     </div>
   </section>
 <!-- SECTION 4 -->
-<!-- for style, see main.scss SECTION 4 -->
+<!-- 
+  SECTION 4. style: scss/main.scss lines: 381-507
+-->
   <section class="section4 container-fluid" id="services">
     <div class="container">
       <div class="row">
@@ -327,7 +334,8 @@
       </div>
       <div class="row">
         <div class="section4__signUp col-lg-12">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+          <button class="btn btn-primary" data-toggle="modal" 
+          data-target="#signUp" ng-click="newForm()">
             Sign Up
           </button>
         </div>
@@ -337,6 +345,9 @@
 
 <!-- ======================== MAIN END ============================================= -->
 <!-- ======================== FOOTER START ========================================= -->
+<!-- 
+  FOOTER. style: scss/main.scss lines: 510 -550
+-->
 <footer class="container-fluid">
   <div id="top-footer" class="container">
     <div class="row">
