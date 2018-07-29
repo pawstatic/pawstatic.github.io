@@ -25,3 +25,9 @@ http://pawstatic-training.dx.am
 
 # the prob over there - free version cannot get SSL certificate to save card payment details, database is ok to operate the dog profile
 # data, but refusing to save any the payment data.
+
+
+http://pawstatic-training.epizy.com/
+
+
+# still a lot of bugs unsolved, 
