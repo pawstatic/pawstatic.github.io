@@ -1,3 +1,11 @@
+# webpage here: http://pawstatic-training.epizy.com/
+# and/or here : http://pawstatic-training.dx.am
+
+# it'll not work on github alone as it needs server+database
+
+
+
+
 # pawstatic.github.io
 1) create landing with BS4 and scss - check with pixelperfect
 2) signup modal
@@ -29,5 +37,6 @@ http://pawstatic-training.dx.am
 http://pawstatic-training.epizy.com/
 
 
-# still a lot of bugs unsolved, 
+# still a lot of bugs unsolved,
+# 
 >>>>>>> 1df2eb66e7104b21b7df36ce7d7fdd279139b982
